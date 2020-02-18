@@ -4,7 +4,8 @@ export default {
     'alert':'警报',
     'search':'查询',
     'searchInfo':'请输入机器码查询',
-    'language':'En'
+    'language':'En',
+    'loginOut':'退出登录'
   },
   login:{
     'title' : '软件系統',

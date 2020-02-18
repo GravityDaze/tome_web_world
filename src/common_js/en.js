@@ -4,7 +4,8 @@ export default {
     'alert':'ALERT',
     'search':'Search',
     'searchInfo':'enter code for search',
-    'language':'中文'
+    'language':'中文',
+    'loginOut':'LoginOut'
   },
   login:{
     'title' : 'Software system',

@@ -53,7 +53,7 @@
         <div class="select_comment">
           <!--<div class="my_hover" @click="editorUserInfo"><span>编辑个人信息</span></div>-->
           <!--<div class="my_hover" @click="alterPassword"><span>修改密码</span></div>-->
-          <div class="my_hover" @click="loginOut"><span>退出登录</span></div>
+          <div class="my_hover" @click="loginOut"><span>{{$t('singleText.loginOut')}}</span></div>
         </div>
 
       </div>
