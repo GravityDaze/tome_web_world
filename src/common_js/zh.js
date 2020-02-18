@@ -1,5 +1,11 @@
 /*中文语言 zh-CHT */
 export default {
+  singleText:{
+    'alert':'警报',
+    'search':'查询',
+    'searchInfo':'请输入机器码查询',
+    'language':'En'
+  },
   login:{
     'title' : '软件系統',
     'username' : '请输入用戶名',

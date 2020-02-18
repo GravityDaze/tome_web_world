@@ -98,8 +98,8 @@
         <!--A2线路类型-->
         <el-col :span="6">
           <div class="line_box" v-if="roadLineType">
-            <span>线路类型</span>
-            <el-select v-model="allParams.roadLineType" size="small" placeholder="请选择线路类型" @change="selectChange1">
+            <span>{{$t('queryName.roadLineType')}}</span>
+            <el-select v-model="allParams.roadLineType" size="small" :placeholder="$t('placeholderInfo.roadLineType')" @change="selectChange1">
               <el-option
                 v-for="item in roadLineTypeArr"
                 :key="item.id"
@@ -114,8 +114,8 @@
 
         <el-col :span="6">
           <div class="line_box" v-if="sexType">
-            <span>性别</span>
-            <el-select v-model="allParams.sexType" size="small" placeholder="请选择性别" @change="selectChange1">
+            <span>{{$t('queryName.sexType')}}</span>
+            <el-select v-model="allParams.sexType" size="small" :placeholder="$t('placeholderInfo.sexType')" @change="selectChange1">
               <el-option
                 v-for="item in sexTypeArr"
                 :key="item.id"
@@ -129,8 +129,8 @@
 
         <el-col :span="6">
           <div class="line_box" v-if="roadLineName">
-            <span>线路名称</span>
-            <el-input v-model="allParams.roadLineName" placeholder="请输入线路名称"></el-input>
+            <span>{{$t('queryName.roadLineName')}}</span>
+            <el-input v-model="allParams.roadLineName" :placeholder="$t('placeholderInfo.roadLineName')"></el-input>
           </div>
         </el-col>
 
@@ -282,7 +282,7 @@
 
         <el-col :span="6">
           <div class="line_box" v-if="touristGroup2">
-            <span>旅游团</span>
+            <span>{{$t('queryName.touristGroup2')}}</span>
             <el-select v-model="allParams.touristGroup2" size="small" placeholder="请选择旅游团" @change="selectChange1">
               <el-option
                 v-for="item in touristGroup2DropDownList"
@@ -424,16 +424,16 @@
         <!--A2行程名称-->
         <el-col :span="6">
           <div class="line_box" v-if="travelInfoName">
-            <span>行程名称</span>
-            <el-input v-model="allParams.travelInfoName" placeholder="请输入行程名称"></el-input>
+            <span>{{$t('queryName.travelInfoName')}}</span>
+            <el-input v-model="allParams.travelInfoName" :placeholder="$t('placeholderInfo.travelInfoName')"></el-input>
           </div>
         </el-col>
 
 
         <el-col :span="6">
           <div class="line_box" v-if="railName">
-            <span>围栏名称kk</span>
-            <el-input v-model="allParams.railName" placeholder="请输入围栏名称"></el-input>
+            <span>{{$t('queryName.railName')}}</span>
+            <el-input v-model="allParams.railName" :placeholder="$t('placeholderInfo.railName')"></el-input>
           </div>
         </el-col>
         <el-col :span="6">
@@ -716,8 +716,8 @@
 
         <el-col :span="6">
           <div class="line_box" v-if="groupPersonType">
-            <span>成员类型</span>
-            <el-select v-model="allParams.groupPersonType" size="small" placeholder="请选择成员类型" @change="selectChange1">
+            <span>{{$t('queryName.groupPersonType')}}</span>
+            <el-select v-model="allParams.groupPersonType" size="small" :placeholder="$t('placeholderInfo.groupPersonType')" @change="selectChange1">
               <el-option
                 v-for="item in groupPersonTypeArr"
                 :key="item.id"
@@ -732,7 +732,7 @@
         <!--A2选择报警类型-->
         <el-col :span="6">
           <div class="line_box" v-if="alertType">
-            <span>报警类型</span>
+            <span>{{$t('queryName.alertType')}}</span>
             <el-select v-model="allParams.alertType" size="small" placeholder="请选择报警类型" @change="selectChange1">
               <el-option
                 v-for="item in alertTypeArr"
@@ -803,7 +803,9 @@
           </div>
         </el-col>
       </el-row>
-      <div class="search_btn my_hover" @click="queryInfos" v-if="sign!='sign2222'"><span>查</span><span>询</span></div>
+      <div class="search_btn my_hover" @click="queryInfos" v-if="sign!='sign2222'">
+        <span>{{$t('btnInfo.query')}}</span>
+      </div>
     </div>
 
     <!--对应页面的功能组件集合-->
@@ -826,12 +828,12 @@
       </div>
 
       <div class="btn_box2">
-        <div class="my_hover" v-if="isAdd" @click="openAddEditorDialog('新增')">新增</div>
+        <div class="my_hover" v-if="isAdd" @click="openAddEditorDialog('新增')">{{$t('btnInfo.add')}}</div>
         <div class="my_hover" v-if="isAddAdd2" @click="addSceneryToArea">添加</div>
 
-        <div class="my_hover" v-if="isAreaManage" @click="areaInfoSearch">片区管理</div>
+        <div class="my_hover" v-if="isAreaManage" @click="areaInfoSearch">{{$t('btnInfo.areaManage')}}</div>
 
-        <div class="my_hover" v-if="isReturn" @click="returnFacilityFn">归还</div>
+        <div class="my_hover" v-if="isReturn" @click="returnFacilityFn">{{$t('btnInfo.return')}}</div>
 
         <!--<div class="my_hover" v-if="isMoreDel" @click="moreDeleteFunction">批量删除</div>-->
         <div class="my_hover" v-if="false" @click="moreDeleteFunction">批量删除</div>
@@ -839,9 +841,9 @@
 
         <div class="my_hover" v-if="isEditor" @click="openAddEditorDialog('编辑')">编辑</div>
 
-        <div class="my_hover" v-if="isAddQ" @click="addNewGroupFn">新增团</div>
-        <div class="my_hover" v-if="isEditorQ" @click="editorGroupFn">编辑团</div>
-        <div class="my_hover" v-if="isCloseTouristGroup" @click="closeTouristGroupFn">关闭旅游团</div>
+        <div class="my_hover" v-if="isAddQ" @click="addNewGroupFn">{{$t('btnInfo.addGroup')}}</div>
+        <div class="my_hover" v-if="isEditorQ" @click="editorGroupFn">{{$t('btnInfo.editGroup')}}</div>
+        <div class="my_hover" v-if="isCloseTouristGroup" @click="closeTouristGroupFn">{{$t('btnInfo.closeGroup')}}</div>
 
         <div class="my_hover" v-if="isEnabled" @click="isEnabledDisabled('启用')">启用</div>
         <div class="my_hover" v-if="isDisabled" @click="isEnabledDisabled('禁用')">禁用</div>
@@ -882,18 +884,22 @@
                  accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"/>
         </div>
         <div class="my_hover import" v-if="isImportDevice">
-          导入设备
+          {{$t('btnInfo.importFacility')}}
+          <!--导入设备-->
           <input id="uploadBtn" class="my_hover" type="file" @change="importf(this)"
                  accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"/>
         </div>
-        <div class="my_hover" @click="exportInfo" v-if="isExportDevice">导出设备</div>
+        <div class="my_hover" @click="exportInfo" v-if="isExportDevice">
+          {{$t('btnInfo.exportFacility')}}
+          <!--导出设备-->
+        </div>
         <div class="my_hover" @click="getExcel" v-if="isImportParam">
-          下载excel模板
+          {{$t('btnInfo.downloadExcelTemplate')}}
           <a :href="$store.state.downloadUrl" id="downloadBtn"></a>
         </div>
 
-        <div class="my_hover" v-if="isClearTravelInfo" @click="clearTravelInfosFn">清空行程</div>
-        <div class="my_hover" v-if="isClearAlert" @click="clearAlertInfosFn">清空警报</div>
+        <div class="my_hover" v-if="isClearTravelInfo" @click="clearTravelInfosFn">{{$t('btnInfo.clearTravel')}}</div>
+        <div class="my_hover" v-if="isClearAlert" @click="clearAlertInfosFn">  {{$t('btnInfo.clearAlert')}}</div>
 
         <div class="my_hover" v-if="sign=='systemlogmanage'" @click="chooseShowLog('用户日志')">用户日志</div>
         <div class="my_hover" v-if="sign=='systemlogmanage'" @click="chooseShowLog('操作员日志')">操作员日志</div>

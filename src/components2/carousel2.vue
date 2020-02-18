@@ -27,13 +27,13 @@
       </div>
 
       <div class="div4" v-if="$store.state.addparamsss">
-        <input v-model="searchContent" placeholder="请输入机器码查询"></input>
-        <button @click="homeSearchFacilityFn">查询</button>
+        <input v-model="searchContent" :placeholder="$t('singleText.searchInfo')"></input>
+        <button @click="homeSearchFacilityFn">{{$t('singleText.search')}}</button>
       </div>
 
       <div class="div5" v-if="$store.state.addparamsss">
         <div class="my_hover" @click="openAlertInfoBoxFn">
-          <span style="color: black">警报</span>
+          <span style="color: black">{{$t('singleText.alert')}}</span>
         </div>
 
       </div>
@@ -44,7 +44,7 @@
       <div class="top3_2" @click="goNewPage">
         <span class="my_hover">{{$store.state.allScopeUserName}}</span>
       </div>
-      <div class="top3_3" @click="changeLanguageFn"></div>
+      <div class="top3_3 my_hover" @click="changeLanguageFn">{{$t('singleText.language')}}</div>
       <div class="select_info_box">
         <div class="select_title">
           <div class="header_img" style="background-image: url('../../static/logo.png')"></div>
@@ -594,8 +594,9 @@
 
   .top3_3 {
     padding-left: 16px;
-    background-image: url("../../static/language.png");
-    width: 6px;
+    /*background-image: url("../../static/language.png");*/
+    /*width: 6px;*/
+    width: 30px;
     height: 22px;
     background-size: 100% 100%;
     border-radius: 15px;

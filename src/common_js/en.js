@@ -1,5 +1,11 @@
 /*英文包 en*/
 export default {
+  singleText:{
+    'alert':'ALERT',
+    'search':'Search',
+    'searchInfo':'enter code for search',
+    'language':'中文'
+  },
   login:{
     'title' : 'Software system',
     'username' : 'Please enter the user name',
