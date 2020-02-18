@@ -129,62 +129,62 @@
         isAdd: true,
         isShowEnabled: true,
         isHandle: true,
-        tableTitle: [
-          {
-            prop: 'ID',
-            label: '景区服务商ID',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'Name',
-            label: '景区服务商名称',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'UserAccount',
-            label: '登录名',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'DeviceCount',
-            label: '设备总数',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'OnlineCount',
-            label: '在线总数',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'OfflineCount',
-            label: '离线总数',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'DutyName',
-            label: '负责人姓名',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'DutyPhone',
-            label: '负责人电话',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'Address',
-            label: '通讯地址',
-            // width: '120',
-            align: 'center'
-          },
-        ],
+        // tableTitle: [
+        //   {
+        //     prop: 'ID',
+        //     label: '景区服务商ID',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'Name',
+        //     label: '景区服务商名称',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'UserAccount',
+        //     label: '登录名',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'DeviceCount',
+        //     label: '设备总数',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'OnlineCount',
+        //     label: '在线总数',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'OfflineCount',
+        //     label: '离线总数',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'DutyName',
+        //     label: '负责人姓名',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'DutyPhone',
+        //     label: '负责人电话',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'Address',
+        //     label: '通讯地址',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        // ],
         tableData: [
           // {
           //   ID: '101',
@@ -213,6 +213,66 @@
           ]
         },
 
+      }
+    },
+    computed: {
+      tableTitle: function () {
+        return [
+          {
+            prop: 'ID',
+            label: this.$t('sceneryProviderInfo.providerId'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'Name',
+            label: this.$t('sceneryProviderInfo.providerName'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'UserAccount',
+            label: this.$t('sceneryProviderInfo.loginName'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'DeviceCount',
+            label: this.$t('sceneryProviderInfo.facilityAmount'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'OnlineCount',
+            label: this.$t('sceneryProviderInfo.onlineAmount'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'OfflineCount',
+            label: this.$t('sceneryProviderInfo.offlineAmount'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'DutyName',
+            label: this.$t('sceneryProviderInfo.dutyName'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'DutyPhone',
+            label: this.$t('sceneryProviderInfo.dutyPhone'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'Address',
+            label:  this.$t('sceneryProviderInfo.address'),
+            // width: '120',
+            align: 'center'
+          },
+        ]
       }
     },
     mounted() {

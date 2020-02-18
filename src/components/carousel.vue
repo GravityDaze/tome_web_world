@@ -18,7 +18,9 @@
       <div class="top3_2" @click="goNewPage">
         <span class="my_hover">{{$store.state.allScopeUserName}}</span>
       </div>
-      <div class="top3_3"></div>
+      <div class="top3_3 my_hover" @click="changeLanguageFn">
+        {{$t('singleText.language')}}
+      </div>
       <div class="select_info_box">
         <div class="select_title">
           <div class="header_img" style="background-image: url('../../static/logo.png')"></div>
@@ -27,7 +29,9 @@
         <div class="select_comment">
           <div class="my_hover" @click="editorUserInfo"><span>编辑个人信息</span></div>
           <div class="my_hover" @click="alterPassword"><span>修改密码</span></div>
-          <div class="my_hover" @click="loginOut"><span>退出登录</span></div>
+          <div class="my_hover" @click="loginOut">
+            <span>{{$t('singleText.loginOut')}}</span>
+          </div>
         </div>
 
       </div>
@@ -195,6 +199,19 @@
       }
     },
     methods: {
+
+      //语言切换按钮
+      changeLanguageFn(){
+
+        // alert('准备切换语言')
+
+        if(this.$i18n.locale === 'zh'){
+          this.$i18n.locale = 'en'
+        }else if(this.$i18n.locale ==='en'){
+          this.$i18n.locale = 'zh'
+        }
+      },
+
       //编辑用户信息
       editorUserInfo() {
         var dom = document.getElementsByClassName('select_info_box')[0]
@@ -521,8 +538,9 @@
 
   .top3_3 {
     padding-left: 16px;
-    background-image: url("../../static/language.png");
-    width: 6px;
+    /*background-image: url("../../static/language.png");*/
+    /*width: 6px;*/
+    width: 30px;
     height: 22px;
     background-size: 100% 100%;
     border-radius: 15px;

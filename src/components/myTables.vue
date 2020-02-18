@@ -340,7 +340,7 @@
         </template>
       </el-table-column>
 
-      <el-table-column label="操作" align="center" width="160" v-if="isHandle">
+      <el-table-column :label="$t('singleText.handle')" align="center" width="160" v-if="isHandle">
         <template slot-scope="scope">
           <el-button
             size="mini"
@@ -360,7 +360,7 @@
       </el-table-column>
 
       <!--以下这个操作是单独为A2的某些页面添加的-->
-      <el-table-column label="操作" align="center" width="160" v-if="isHandle222">
+      <el-table-column :label="$t('singleText.handle')" align="center" width="160" v-if="isHandle222">
         <template slot-scope="scope">
           <el-button
             size="mini"

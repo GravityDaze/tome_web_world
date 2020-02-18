@@ -1,11 +1,24 @@
 /*中文语言 zh-CHT */
 export default {
+  //景区服务商列表表头
+  sceneryProviderInfo:{
+    'providerId':'景区服务商Id',
+    'providerName':'景区服务商名称',
+    'loginName':'登录名',
+    'facilityAmount':'设备总数',
+    'onlineAmount':'在线总数',
+    'offlineAmount':'离线总数',
+    'dutyName':'负责人姓名',
+    'dutyPhone':'负责人电话',
+    'address':'通讯地址',
+  },
   singleText:{
     'alert':'警报',
     'search':'查询',
     'searchInfo':'请输入机器码查询',
     'language':'En',
-    'loginOut':'退出登录'
+    'loginOut':'退出登录',
+    'handle':'操作',
   },
   login:{
     'title' : '软件系統',

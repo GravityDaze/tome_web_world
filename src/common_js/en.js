@@ -1,11 +1,24 @@
 /*英文包 en*/
 export default {
+  //景区服务商列表表头
+  sceneryProviderInfo:{
+    'providerId':'serviceProviderID',
+    'providerName':'serviceProviderName',
+    'loginName':'loginName',
+    'facilityAmount':'facilityAmount',
+    'onlineAmount':'onlineAmount',
+    'offlineAmount':'offlineAmount',
+    'dutyName':'dutyName',
+    'dutyPhone':'dutyPhone',
+    'address':'address',
+  },
   singleText:{
     'alert':'ALERT',
     'search':'Search',
     'searchInfo':'enter code for search',
     'language':'中文',
-    'loginOut':'LoginOut'
+    'loginOut':'LoginOut',
+    'handle':'handle',
   },
   login:{
     'title' : 'Software system',
