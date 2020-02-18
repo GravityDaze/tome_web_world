@@ -10,6 +10,10 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import echarts from 'echarts'
 import * as qiniu from 'qiniu-js'
+import VueI18n from 'vue-i18n'
+import en from './common_js/en.js'
+// import ft from './common_js/ft.js'
+import zh from './common_js/zh.js'
 
 import Blob from './excel/Blob'
 import Export2Excel from './excel/Export2Excel.js'
@@ -21,6 +25,7 @@ require('rem-init')({
 
 Vue.config.productionTip = false
 Vue.use(ElementUI);
+Vue.use(VueI18n);
 Vue.use(Vuex);
 Vue.prototype.$axios = Axios;
 Vue.prototype.$echarts = echarts
@@ -83,11 +88,18 @@ Axios.interceptors.request.use(
     return Promise.reject(error);
   });
 
-
+const i18n = new VueI18n({
+  locale: 'zh', // 语言标识
+  messages: {
+    'en': en,
+    'zh': zh,
+  }
+})
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  i18n,
   router,
   store,
   components: { App },

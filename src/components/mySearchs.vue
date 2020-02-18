@@ -9,15 +9,15 @@
       <el-row :gutter="10">
         <el-col :span="6">
           <div class="line_box" v-if="searchIfInfo">
-            <span>搜索条件</span>
-            <el-input v-model="allParams.searchIfInfo" placeholder="请输入搜索内容"></el-input>
+            <span>{{$t('queryName.searchIfInfo')}}</span>
+            <el-input v-model="allParams.searchIfInfo" :placeholder="$t('placeholderInfo.searchIfInfo')"></el-input>
           </div>
         </el-col>
 
         <el-col :span="6">
           <div class="line_box" v-if="loginName">
-            <span>登录名</span>
-            <el-input v-model="allParams.loginName" placeholder="请输入用户登录名"></el-input>
+            <span>{{$t('queryName.loginName')}}</span>
+            <el-input v-model="allParams.loginName" :placeholder="$t('placeholderInfo.loginName')"></el-input>
           </div>
         </el-col>
         <el-col :span="6">
@@ -48,7 +48,7 @@
 
         <el-col :span="6">
           <div class="line_box" v-if="affiliatedAreaRRR">
-            <span>归属区域</span>
+            <span>{{$t('queryName.affiliatedAreaRRR')}}</span>
             <el-input v-model="allParams.affiliatedAreaRRR" placeholder="请输入归属景区"></el-input>
           </div>
         </el-col>
@@ -61,8 +61,8 @@
         </el-col>
         <el-col :span="6">
           <div class="line_box" v-if="spotName">
-            <span>景点名称</span>
-            <el-input v-model="allParams.scenerySpotName" placeholder="请输入景点名称"></el-input>
+            <span>{{$t('queryName.spotName')}}</span>
+            <el-input v-model="allParams.scenerySpotName" :placeholder="$t('placeholderInfo.spotName')"></el-input>
           </div>
         </el-col>
         <el-col :span="6">
@@ -160,8 +160,8 @@
         </el-col>
         <el-col :span="6">
           <div class="line_box" v-if="serviceProviderName">
-            <span>服务商名称</span>
-            <el-input v-model="allParams.serviceProviderName" placeholder="请输入服务商名称"></el-input>
+            <span>{{$t('queryName.serviceProviderName')}}</span>
+            <el-input v-model="allParams.serviceProviderName" :placeholder="$t('placeholderInfo.serviceProviderName')"></el-input>
           </div>
         </el-col>
         <el-col :span="6">
@@ -209,8 +209,8 @@
 
         <el-col :span="6">
           <div class="line_box" v-if="allocationState">
-            <span>分配状态</span>
-            <el-select v-model="allParams.allocationState" size="small" placeholder="请选择分配状态" @change="selectChange1">
+            <span>{{$t('queryName.allocationState')}}</span>
+            <el-select v-model="allParams.allocationState" size="small" :placeholder="$t('placeholderInfo.allocationState')" @change="selectChange1">
               <el-option
                 v-for="item in allocationStatus"
                 :key="item.id"
@@ -225,8 +225,8 @@
 
         <el-col :span="6">
           <div class="line_box" v-if="userTel">
-            <span>手机号</span>
-            <el-input v-model="allParams.userTel" placeholder="请输入手机号"></el-input>
+            <span>{{$t('queryName.userTel')}}</span>
+            <el-input v-model="allParams.userTel" :placeholder="$t('placeholderInfo.userTel')"></el-input>
           </div>
         </el-col>
         <el-col :span="6">
@@ -268,7 +268,7 @@
 
         <el-col :span="6">
           <div class="line_box" v-if="monthDate">
-            <span>查询月份</span>
+            <span>{{$t('queryName.monthDate')}}</span>
             <el-date-picker
               v-model="allParams.monthDate"
               type="date"
@@ -298,8 +298,8 @@
 
         <el-col :span="6">
           <div class="line_box" v-if="rfidSerialNum">
-            <span>发射源编号</span>
-            <el-input v-model="allParams.rfidSerialNum" placeholder="请输入发射源编号"></el-input>
+            <span>{{$t('queryName.rfidSerialNum')}}</span>
+            <el-input v-model="allParams.rfidSerialNum" :placeholder="$t('placeholderInfo.rfidSerialNum')"></el-input>
           </div>
         </el-col>
         <el-col :span="6">
@@ -391,7 +391,7 @@
         </el-col>
         <el-col :span="12">
           <div class="line_box" v-if="createGroupTime2">
-            <span>搜索时间</span>
+            <span>{{$t('queryName.createGroupTime2')}}</span>
             <!--第一个手输入时间-->
             <!--<el-input v-model="allParams.createGroupTime" placeholder="请输入团号"></el-input>-->
 
@@ -445,15 +445,15 @@
 
         <el-col :span="6">
           <div class="line_box" v-if="imeiNum">
-            <span>设备IMEI</span>
-            <el-input v-model="allParams.imei" placeholder="请输入设备IMEI号"></el-input>
+            <span>{{$t('queryName.imeiNum')}}</span>
+            <el-input v-model="allParams.imei" :placeholder="$t('placeholderInfo.imeiNum')"></el-input>
           </div>
         </el-col>
 
         <el-col :span="6">
           <div class="line_box" v-if="codeMachine">
-            <span>设备编号</span>
-            <el-input v-model="allParams.codeMachine" placeholder="请输入设备编号"></el-input>
+            <span>{{$t('queryName.codeMachine')}}</span>
+            <el-input v-model="allParams.codeMachine" :placeholder="$t('placeholderInfo.codeMachine')"></el-input>
           </div>
         </el-col>
         <el-col :span="6">
@@ -503,8 +503,8 @@
         <!--添加A2条件筛选服务商名称-->
         <el-col :span="6">
           <div class="line_box" v-if="a2ChooseServiceProvider">
-            <span>A2服务商名称</span>
-            <el-select v-model="allParams.a2ChooseServiceProvider" size="small" placeholder="请选择服务商名称">
+            <span>{{$t('queryName.a2ChooseServiceProvider')}}</span>
+            <el-select v-model="allParams.a2ChooseServiceProvider" size="small" :placeholder="$t('placeholderInfo.a2ChooseServiceProvider')">
               <el-option
                 v-for="item in a2ChooseServiceProviderArr"
                 :key="item.ID"
@@ -684,8 +684,8 @@
         </el-col>
         <el-col :span="6">
           <div class="line_box" v-if="sceneryState">
-            <span>状态</span>
-            <el-select v-model="allParams.sceneryState" size="small" placeholder="请选择状态" @change="selectChange1">
+            <span>{{$t('queryName.sceneryState')}}</span>
+            <el-select v-model="allParams.sceneryState" size="small" :placeholder="$t('placeholderInfo.sceneryState')" @change="selectChange1">
               <el-option
                 v-for="item in sceneryStatus"
                 :key="item.id"
@@ -700,8 +700,8 @@
         <!--A2在线状态筛选-->
         <el-col :span="6">
           <div class="line_box" v-if="isOnLineState">
-            <span>在线状态</span>
-            <el-select v-model="allParams.isOnLineState" size="small" placeholder="请选择状态" @change="selectChange1">
+            <span>{{$t('queryName.isOnLineState')}}</span>
+            <el-select v-model="allParams.isOnLineState" size="small" :placeholder="$t('placeholderInfo.isOnLineState')" @change="selectChange1">
               <el-option
                 v-for="item in isOnLineStateArr"
                 :key="item.id"
@@ -809,11 +809,11 @@
     <!--对应页面的功能组件集合-->
     <div class="function_btn_box">
       <div class="btn_box1" v-if="isAmountStatistics">
-        <span style="">设备总台数：</span><span>{{$store.state.allCountP}}</span><span>台</span>
+        <span style="">{{$t('textInfo1.facilityCount')}}：</span><span>{{$store.state.allCountP}}</span><span>台</span>
         <div style="display: inline-block;margin: 0 40px">
-          <span style="">在线总台数：</span><span>{{$store.state.onlineCountP}}</span><span>台</span>
+          <span style="">{{$t('textInfo1.onlineCount')}}：</span><span>{{$store.state.onlineCountP}}</span><span>台</span>
         </div>
-        <span style="">离线总台数：</span><span>{{$store.state.offlineCountP}}</span><span>台</span>
+        <span style="">{{$t('textInfo1.offlineCount')}}：</span><span>{{$store.state.offlineCountP}}</span><span>台</span>
       </div>
 
       <div class="btn_box1" v-if="isRfidAmountStatistics">

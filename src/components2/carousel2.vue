@@ -17,13 +17,13 @@
 
     <div class="top_add">
       <div class="div1">
-        <span style="color: black">总设备数:</span><span>{{$store.state.facilityTotalA2}}</span>
+        <span style="color: black">{{$t('homeTitle.facilityCount')}}:</span><span>{{$store.state.facilityTotalA2}}</span>
       </div>
       <div class="div2">
-        <span style="color: black">在线设备数:</span><span>{{$store.state.onLineCountA2}}</span>
+        <span style="color: black">{{$t('homeTitle.onlineCount')}}:</span><span>{{$store.state.onLineCountA2}}</span>
       </div>
       <div class="div3">
-        <span style="color: black">设备在线率:</span><span>{{$store.state.onlineCountPercentageA2}}%</span>
+        <span style="color: black">{{$t('homeTitle.onlineRate')}}:</span><span>{{$store.state.onlineCountPercentageA2}}%</span>
       </div>
 
       <div class="div4" v-if="$store.state.addparamsss">
@@ -44,7 +44,7 @@
       <div class="top3_2" @click="goNewPage">
         <span class="my_hover">{{$store.state.allScopeUserName}}</span>
       </div>
-      <div class="top3_3"></div>
+      <div class="top3_3" @click="changeLanguageFn"></div>
       <div class="select_info_box">
         <div class="select_title">
           <div class="header_img" style="background-image: url('../../static/logo.png')"></div>
@@ -222,6 +222,21 @@
       }
     },
     methods: {
+
+
+      //语言切换按钮
+      changeLanguageFn(){
+
+        alert('准备切换语言')
+
+        if(this.$i18n.locale === 'zh'){
+          this.$i18n.locale = 'en'
+        }else if(this.$i18n.locale ==='en'){
+          this.$i18n.locale = 'zh'
+        }
+      },
+
+
       //首页查询设备信息方法
       homeSearchFacilityFn(){
         this.$emit('goToSearchFacilityFn',this.searchContent)
