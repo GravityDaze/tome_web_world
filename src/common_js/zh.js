@@ -12,6 +12,19 @@ export default {
     'dutyPhone':'负责人电话',
     'address':'通讯地址',
   },
+  sceneryGroupPersonInfo: {
+    'name':'姓名',
+    'isOnline':'是否在线'
+  },
+  sceneryScopeListInfo: {
+    'name':'景区名称',
+    'isEnabled':'是否启用'
+  },
+  roadLineInfo: {
+    'name':'路线名称',
+    'type':'路线类型',
+    'destination':'目的地'
+  },
   singleText:{
     'alert':'警报',
     'search':'查询',

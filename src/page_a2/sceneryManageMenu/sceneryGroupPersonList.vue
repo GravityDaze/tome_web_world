@@ -253,29 +253,29 @@
             isEditorQ: true,//显示编辑按钮
             searchIfInfo: true,
             isToolBar:false,//这个属于树形视图页面独有的属性，重点注意，表示是否显示筛选按钮及查询按钮
-            tableTitle: [
-              {
-                prop: 'Name',
-                label: '姓名',
-                // width: '600',
-                align: 'center'
-              },
-
-              {
-                prop: 'isOnLine',
-                label: '是否在线',
-                // width: '500',
-                align: 'center',
-                formatter:function (row) {
-                  if(row.isOnLine=='0'){
-                    return '离线'
-                  }else if(row.isOnLine=='1'){
-                    return '在线'
-                  }
-                }
-              },
-
-            ],
+            // tableTitle: [
+            //   {
+            //     prop: 'Name',
+            //     label: '姓名',
+            //     // width: '600',
+            //     align: 'center'
+            //   },
+            //
+            //   {
+            //     prop: 'isOnLine',
+            //     label: '是否在线',
+            //     // width: '500',
+            //     align: 'center',
+            //     formatter:function (row) {
+            //       if(row.isOnLine=='0'){
+            //         return '离线'
+            //       }else if(row.isOnLine=='1'){
+            //         return '在线'
+            //       }
+            //     }
+            //   },
+            //
+            // ],
             tableData: [
               // {
               //   "isOnLine": 0,
@@ -327,6 +327,33 @@
               "Mode": '',//0 一次接听就停止  1 循环拨打
 
             },
+          }
+      },
+      computed: {
+        tableTitle:function () {
+            return [
+              {
+                prop: 'Name',
+                label: this.$t('sceneryGroupPersonInfo.name'),
+                // width: '600',
+                align: 'center'
+              },
+
+              {
+                prop: 'isOnLine',
+                label: this.$t('sceneryGroupPersonInfo.isOnline'),
+                // width: '500',
+                align: 'center',
+                formatter:function (row) {
+                  if(row.isOnLine=='0'){
+                    return '离线'
+                  }else if(row.isOnLine=='1'){
+                    return '在线'
+                  }
+                }
+              },
+
+            ]
           }
       },
       mounted(){

@@ -2169,16 +2169,62 @@
           "Detail": "",//线路详情
           "Type": ''
         },
-        tableTitle: [
+        // tableTitle: [
+        //   {
+        //     prop: 'Name',
+        //     label: '路线名称',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'Type',
+        //     label: '路线类型',
+        //     // width: '120',
+        //     align: 'center',
+        //     formatter: function (row) {
+        //       if (row.Type == 1) {
+        //         return '出境旅游'
+        //       } else if (row.Type == 2) {
+        //         return '周边短途'
+        //       } else if (row.Type == 3) {
+        //         return '国内长线'
+        //       }
+        //     }
+        //   },
+        //   {
+        //     prop: 'Destination',
+        //     label: '目的地',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        // ],
+        tableData: [
+          // {
+          //   "Name": "名称1",
+          //   "Type": 2,
+          //   "ID": 1141,
+          //   "Province": "四川省",
+          //   "Detail": "自贡",
+          //   "City": "自贡市",
+          //   "Destination": "四川省自贡市"
+          //
+          // }
+        ]
+
+      }
+    },
+    computed: {
+      tableTitle: function () {
+        return    [
           {
             prop: 'Name',
-            label: '路线名称',
+            label: this.$t('roadLineInfo.name'),
             // width: '120',
             align: 'center'
           },
           {
             prop: 'Type',
-            label: '路线类型',
+            label: this.$t('roadLineInfo.type'),
             // width: '120',
             align: 'center',
             formatter: function (row) {
@@ -2193,24 +2239,11 @@
           },
           {
             prop: 'Destination',
-            label: '目的地',
+            label: this.$t('roadLineInfo.destination'),
             // width: '120',
             align: 'center'
           },
-        ],
-        tableData: [
-          // {
-          //   "Name": "名称1",
-          //   "Type": 2,
-          //   "ID": 1141,
-          //   "Province": "四川省",
-          //   "Detail": "自贡",
-          //   "City": "自贡市",
-          //   "Destination": "四川省自贡市"
-          //
-          // }
         ]
-
       }
     },
 

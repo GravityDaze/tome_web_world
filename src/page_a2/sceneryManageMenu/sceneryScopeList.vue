@@ -137,23 +137,23 @@
         isAdd: true,
         isShowEnabled: true,
         isHandle: true,
-        tableTitle: [
-          {
-            prop: 'travelGencyName',
-            label: '景区名称',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'enabled',
-            label: '是否启用',
-            // width: '120',
-            align: 'center',
-            formatter: function (row) {
-              return row.enabled ? '启用' : '禁用'
-            }
-          },
-        ],
+        // tableTitle: [
+        //   {
+        //     prop: 'travelGencyName',
+        //     label: '景区名称',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'enabled',
+        //     label: '是否启用',
+        //     // width: '120',
+        //     align: 'center',
+        //     formatter: function (row) {
+        //       return row.enabled ? '启用' : '禁用'
+        //     }
+        //   },
+        // ],
         tableData: [
           // {
           //   enabled: true,
@@ -182,6 +182,27 @@
           railPointTextDefault: '依次输入坐标点，并用‘;’隔开,末尾务必以坐标点结束）：100,22;116.1,66.1;116.2,39.3;118,39;119,33',
           railPointText: '',
         },
+      }
+    },
+    computed: {
+      tableTitle:function () {
+        return  [
+          {
+            prop: 'travelGencyName',
+            label: this.$t('sceneryScopeListInfo.name'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'enabled',
+            label: this.$t('sceneryScopeListInfo.isEnabled'),
+            // width: '120',
+            align: 'center',
+            formatter: function (row) {
+              return row.enabled ? '启用' : '禁用'
+            }
+          },
+        ]
       }
     },
     mounted() {

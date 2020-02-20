@@ -12,6 +12,19 @@ export default {
     'dutyPhone':'dutyPhone',
     'address':'address',
   },
+  sceneryGroupPersonInfo: {
+    'name':'name',
+    'isOnline':'isOnline'
+  },
+  sceneryScopeListInfo: {
+    'name':'sceneryName',
+    'isEnabled':'isEnabled'
+  },
+  roadLineInfo: {
+    'name':'roadLineName',
+    'type':'roadLineType',
+    'destination':'destination'
+  },
   singleText:{
     'alert':'ALERT',
     'search':'Search',
