@@ -223,32 +223,32 @@
           "TourLineName": ""
 
         },
-        tableTitle: [
-          {
-            prop: 'Name',
-            label: '景点名称',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'Level',
-            label: '景点等级',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'Address',
-            label: '景点地址',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'Phone',
-            label: '联系电话',
-            // width: '120',
-            align: 'center'
-          },
-        ],
+        // tableTitle: [
+        //   {
+        //     prop: 'Name',
+        //     label: '景点名称',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'Level',
+        //     label: '景点等级',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'Address',
+        //     label: '景点地址',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'Phone',
+        //     label: '联系电话',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        // ],
         tableData: [
           // {
           //   "Address": "213",
@@ -265,6 +265,36 @@
           // }
         ]
 
+      }
+    },
+    computed: {
+      tableTitle:function () {
+        return [
+          {
+            prop: 'Name',
+            label: this.$t('roadLineScenerySpotInfo.name'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'Level',
+            label: this.$t('roadLineScenerySpotInfo.grade'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'Address',
+            label: this.$t('roadLineScenerySpotInfo.address'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'Phone',
+            label: this.$t('roadLineScenerySpotInfo.tel'),
+            // width: '120',
+            align: 'center'
+          },
+        ]
       }
     },
     mounted() {

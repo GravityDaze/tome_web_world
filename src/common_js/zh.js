@@ -25,6 +25,22 @@ export default {
     'type':'路线类型',
     'destination':'目的地'
   },
+  roadLineScenerySpotInfo: {
+    'name':'景点名称',
+    'grade':'景点等级',
+    'address':'景点地址',
+    'tel':'联系电话',
+    'state':'状态'
+  },
+  railInfo: {
+    'name':'围栏名称',
+    'sceneryName':'旅游景点',
+    'type':'报警类型',
+    'isEnabled':'是否启用',
+    'hintMode':'提醒方式',
+    'inHintWord':'进提示语',
+    'outHintWord':'出提示语'
+  },
   singleText:{
     'alert':'警报',
     'search':'查询',

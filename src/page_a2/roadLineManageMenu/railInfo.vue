@@ -254,22 +254,99 @@
           OutHintWord: '',//出提示语
           lngLats: '',//经纬度
         },
-        tableTitle: [
+        // tableTitle: [
+        //   {
+        //     prop: 'Name',
+        //     label: '围栏名称',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'ScenicName',
+        //     label: '旅游景点',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'Type',
+        //     label: '报警类型',
+        //     // width: '120',
+        //     align: 'center',
+        //     formatter: function (row) {
+        //       if (row.Type == '1') {
+        //         return '出围栏报警'
+        //       } else if (row.Type == '2') {
+        //         return '进围栏报警'
+        //       } else if (row.Type == '3') {
+        //         return '进出围栏报警'
+        //       }
+        //     }
+        //   },
+        //   {
+        //     prop: 'Enabled',
+        //     label: '是否启用',
+        //     // width: '120',
+        //     align: 'center',
+        //     formatter: function (row) {
+        //       if (row.Enabled == '0') {
+        //         return '禁用'
+        //       } else if (row.Enabled == '1') {
+        //         return '启用'
+        //       }
+        //     }
+        //   },
+        //   {
+        //     prop: 'HintMode',
+        //     label: '提醒方式',
+        //     // width: '120',
+        //     align: 'center',
+        //     formatter: function (row) {
+        //       if (row.HintMode == '0') {
+        //         return '不提示'
+        //       } else if (row.HintMode == '1') {
+        //         return '振动提示'
+        //       } else if (row.HintMode == '2') {
+        //         return '语音提示'
+        //       } else if (row.HintMode == '3') {
+        //         return '振动和语音提示'
+        //       }
+        //     }
+        //   },
+        //   {
+        //     prop: 'InHintWord',
+        //     label: '进提示语',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'OutHintWord',
+        //     label: '出提示语',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        // ],
+        tableData: []
+
+      }
+    },
+    computed: {
+      tableTitle: function () {
+        return   [
           {
             prop: 'Name',
-            label: '围栏名称',
+            label: this.$t('railInfo.name'),
             // width: '120',
             align: 'center'
           },
           {
             prop: 'ScenicName',
-            label: '旅游景点',
+            label: this.$t('railInfo.sceneryName'),
             // width: '120',
             align: 'center'
           },
           {
             prop: 'Type',
-            label: '报警类型',
+            label: this.$t('railInfo.type'),
             // width: '120',
             align: 'center',
             formatter: function (row) {
@@ -284,7 +361,7 @@
           },
           {
             prop: 'Enabled',
-            label: '是否启用',
+            label: this.$t('railInfo.isEnabled'),
             // width: '120',
             align: 'center',
             formatter: function (row) {
@@ -297,7 +374,7 @@
           },
           {
             prop: 'HintMode',
-            label: '提醒方式',
+            label: this.$t('railInfo.hintMode'),
             // width: '120',
             align: 'center',
             formatter: function (row) {
@@ -314,19 +391,17 @@
           },
           {
             prop: 'InHintWord',
-            label: '进提示语',
+            label: this.$t('railInfo.inHintWord'),
             // width: '120',
             align: 'center'
           },
           {
             prop: 'OutHintWord',
-            label: '出提示语',
+            label: this.$t('railInfo.outHintWord'),
             // width: '120',
             align: 'center'
           },
-        ],
-        tableData: []
-
+        ]
       }
     },
     mounted() {

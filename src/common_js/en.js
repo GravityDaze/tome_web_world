@@ -25,6 +25,22 @@ export default {
     'type':'roadLineType',
     'destination':'destination'
   },
+  roadLineScenerySpotInfo: {
+    'name':'scenerySpotName',
+    'grade':'scenerySpotGrade',
+    'address':'sceneryAddress',
+    'tel':'phone',
+    'state':'state'
+  },
+  railInfo: {
+    'name':'railName',
+    'sceneryName':'sceneryName',
+    'type':'alertType',
+    'isEnabled':'isEnabled',
+    'hintMode':'hintMode',
+    'inHintWord':'inHintWord',
+    'outHintWord':'outHintWord'
+  },
   singleText:{
     'alert':'ALERT',
     'search':'Search',

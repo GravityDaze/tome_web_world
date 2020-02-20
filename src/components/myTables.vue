@@ -264,7 +264,7 @@
           <span style="color: red" v-if="scope.row.authStatus=='0'">未认证</span>
         </template>
       </el-table-column>
-      <el-table-column label="状态" align="center" width="60" v-if="!isShowEnabled">
+      <el-table-column :label="$t('roadLineScenerySpotInfo.state')" align="center" width="60" v-if="!isShowEnabled">
         <template slot-scope="scope">
           <span style="color: green" v-if="scope.row.status == 1">启用</span>
           <span style="color: red" v-if="scope.row.status == 0">禁用</span>
@@ -274,7 +274,7 @@
 
 
       <!--此处针对A2的部分页面的启用禁用的参数status开头是大写S，而做的处理-->
-      <el-table-column label="状态" align="center" width="60" v-if="isShowEnabled222">
+      <el-table-column :label="$t('roadLineScenerySpotInfo.state')" align="center" width="60" v-if="isShowEnabled222">
         <template slot-scope="scope">
           <span style="color: green" v-if="scope.row.Status == 1">启用</span>
           <span style="color: red" v-if="scope.row.Status == 0">禁用</span>
