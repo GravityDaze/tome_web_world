@@ -43,44 +43,44 @@
         isExportDevice: true,
         isShowEnabled: true,
         isHandle: false,
-        tableTitle: [
-          {
-            prop: 'NO',
-            label: '编号',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'Address',
-            label: '地址',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'CodeMachine',
-            label: '机器码',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'TravelGencyName',
-            label: '景区服务商',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'ScenicName',
-            label: '旅游景点',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'VisitCount',
-            label: '访问次数',
-            // width: '120',
-            align: 'center'
-          },
-        ],
+        // tableTitle: [
+        //   {
+        //     prop: 'NO',
+        //     label: '编号****',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'Address',
+        //     label: '地址',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'CodeMachine',
+        //     label: '机器码',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'TravelGencyName',
+        //     label: '景区服务商',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'ScenicName',
+        //     label: '旅游景点',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'VisitCount',
+        //     label: '访问次数',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        // ],
         tableData:[
           // {
           //   "CodeMachine": "Q002965",
@@ -97,6 +97,48 @@
           //   "Lat": null
           //
           // }
+        ]
+      }
+    },
+    computed: {
+      tableTitle:function () {
+        return   [
+          {
+            prop: 'NO',
+            label: this.$t('machineCodeInfo.no'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'Address',
+            label: this.$t('machineCodeInfo.address'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'CodeMachine',
+            label: this.$t('machineCodeInfo.codeMachine'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'TravelGencyName',
+            label: this.$t('machineCodeInfo.sceneryProvider'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'ScenicName',
+            label: this.$t('machineCodeInfo.scenerySpotName'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'VisitCount',
+            label: this.$t('machineCodeInfo.visitCount'),
+            // width: '120',
+            align: 'center'
+          },
         ]
       }
     },

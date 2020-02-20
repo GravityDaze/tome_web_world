@@ -51,6 +51,24 @@ export default {
     'onlineState':'在线状态',
     'tel':'手机号'
   },
+  rfidInfo: {
+    'no':'编号',
+    'address':'地址',
+    'visitCount':'播报次数',
+    'sceneryProvider':'景区服务商',
+    'scenerySpotName':'旅游景点',
+    'createTime':'添加时间'
+  },
+  machineCodeInfo: {
+    'no':'编号',
+    'address':'地址',
+    'codeMachine':'机器码',
+    'sceneryProvider':'景区服务商',
+    'scenerySpotName':'旅游景点',
+    'visitCount':'访问次数',
+    'visitTime':'访问时间'
+
+  },
   singleText:{
     'alert':'警报',
     'search':'查询',

@@ -51,6 +51,23 @@ export default {
     'onlineState':'onlineState',
     'tel':'phone'
   },
+  rfidInfo: {
+    'no':'no',
+    'address':'address',
+    'visitCount':'visitCount',
+    'sceneryProvider':'sceneryProvider',
+    'scenerySpotName':'scenerySpotName',
+    'createTime':'createTime'
+  },
+  machineCodeInfo: {
+    'no':'no',
+    'address':'address',
+    'codeMachine':'codeMachine',
+    'sceneryProvider':'sceneryProvider',
+    'scenerySpotName':'scenerySpotName',
+    'visitCount':'visitCount',
+    'visitTime':'visitTime'
+  },
   singleText:{
     'alert':'ALERT',
     'search':'Search',
