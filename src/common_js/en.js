@@ -41,6 +41,16 @@ export default {
     'inHintWord':'inHintWord',
     'outHintWord':'outHintWord'
   },
+  adminFacilityInfo:{
+    'num':'num',
+    'serviceProviderName':'serviceProviderName',
+    'imei':'imei',
+    'codeMachine':'codeMachine',
+    'travelGroup':'travelGroup',
+    'apportionState':'apportionState',
+    'onlineState':'onlineState',
+    'tel':'phone'
+  },
   singleText:{
     'alert':'ALERT',
     'search':'Search',

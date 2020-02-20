@@ -5,7 +5,7 @@ import axios from 'axios'
 Vue.use(Vuex)
 
 const state = {
-
+  showChinaOrEnglish:false,//A2后台管理系统展示英文还是中文，默认展示中文
   addparamsss:false,//此参数作为A2后台系统页面顶部是否展示查询和警报按钮的参数
 
   roleStatusNum:'',//此参数用于判断登录账号是什么角色身份

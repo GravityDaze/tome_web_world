@@ -3,7 +3,7 @@
     <div class="shrink_menu">
       <i class="iconfont icon-category icon_color my_hover" @click="resizeMenu"></i>
     </div>
-    <el-row class="tac">
+    <el-row class="tac" v-if="!$store.state.showChinaOrEnglish">
       <el-col>
         <el-menu
           :default-active="$route.path"
@@ -32,6 +32,38 @@
         </el-menu>
       </el-col>
     </el-row>
+
+
+    <el-row class="tac" v-if="$store.state.showChinaOrEnglish">
+      <el-col>
+        <el-menu
+          :default-active="$route.path"
+          :unique-opened=state
+          class="el-menu-vertical-demo"
+          background-color="#202D3D"
+          @select="handleSelect"
+          router
+          text-color="#fff"
+          active-text-color="#FA8819"
+          :collapse="isCollapse"
+        >
+
+          <template v-for="item in this.menuVar">
+            <el-submenu :index=String(item.ID)>
+              <template slot="title">
+                <i class="iconfont icon-Dollar font18 icon_color"></i>
+                <span>{{item.NameEn}}</span>
+              </template>
+              <template v-for="item1 in item.children">
+                <el-menu-item :index=item1.Link>{{item1.NameEn}}</el-menu-item>
+              </template>
+            </el-submenu>
+          </template>
+
+        </el-menu>
+      </el-col>
+    </el-row>
+
   </div>
 </template>
 

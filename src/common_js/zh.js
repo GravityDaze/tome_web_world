@@ -41,6 +41,16 @@ export default {
     'inHintWord':'进提示语',
     'outHintWord':'出提示语'
   },
+  adminFacilityInfo:{
+    'num':'序号',
+    'serviceProviderName':'景区服务商名称',
+    'imei':'设备IMEI',
+    'codeMachine':'机器码（设备号）',
+    'travelGroup':'旅游团',
+    'apportionState':'分配状态',
+    'onlineState':'在线状态',
+    'tel':'手机号'
+  },
   singleText:{
     'alert':'警报',
     'search':'查询',

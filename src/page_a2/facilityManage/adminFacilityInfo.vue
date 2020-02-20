@@ -167,64 +167,64 @@
           "TravelGencyID":'',
           "TravelGencyName":'',
         },
-        tableTitle: [
-          {
-            prop: 'ID',
-            label: '序号',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'TravelGencyName',
-            label: '景区服务商名称',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'IMEI',
-            label: '设备IMEI',
-            // width: '120',
-            align: 'center'
-          },
-
-          {
-            prop: 'CodeMachine',
-            label: '机器码（设备号）',
-            // width: '120',
-            align: 'center',
-          },
-
-          {
-            prop: 'TouristTeamName',
-            label: '旅游团',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'TravelGencyName',
-            label: '分配状态',
-            // width: '120',
-            align: 'center',
-            formatter:function(row){
-              return row.TravelGencyName==null?'未分配':'已分配'
-            }
-          },
-          {
-            prop: 'IsOnline',
-            label: '在线状态',
-            // width: '120',
-            align: 'center',
-            formatter:function(row){
-              return row.IsOnline=='0'?'离线':'在线'
-            }
-          },
-          {
-            prop: 'Tel',
-            label: '手机号',
-            // width: '120',
-            align: 'center'
-          },
-        ],
+        // tableTitle: [
+        //   {
+        //     prop: 'ID',
+        //     label: '序号+++++',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'TravelGencyName',
+        //     label: '景区服务商名称',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'IMEI',
+        //     label: '设备IMEI',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //
+        //   {
+        //     prop: 'CodeMachine',
+        //     label: '机器码（设备号）',
+        //     // width: '120',
+        //     align: 'center',
+        //   },
+        //
+        //   {
+        //     prop: 'TouristTeamName',
+        //     label: '旅游团',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'TravelGencyName',
+        //     label: '分配状态',
+        //     // width: '120',
+        //     align: 'center',
+        //     formatter:function(row){
+        //       return row.TravelGencyName==null?'未分配':'已分配'
+        //     }
+        //   },
+        //   {
+        //     prop: 'IsOnline',
+        //     label: '在线状态',
+        //     // width: '120',
+        //     align: 'center',
+        //     formatter:function(row){
+        //       return row.IsOnline=='0'?'离线':'在线'
+        //     }
+        //   },
+        //   {
+        //     prop: 'Tel',
+        //     label: '手机号',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        // ],
         tableData: [
           // {
           //   "ID": 1,
@@ -238,6 +238,68 @@
           // }
         ]
 
+      }
+    },
+    computed: {
+      tableTitle:function () {
+        return   [
+          {
+            prop: 'ID',
+            label: this.$t('adminFacilityInfo.num'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'TravelGencyName',
+            label: this.$t('adminFacilityInfo.serviceProviderName'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'IMEI',
+            label: this.$t('adminFacilityInfo.imei'),
+            // width: '120',
+            align: 'center'
+          },
+
+          {
+            prop: 'CodeMachine',
+            label: this.$t('adminFacilityInfo.codeMachine'),
+            // width: '120',
+            align: 'center',
+          },
+
+          {
+            prop: 'TouristTeamName',
+            label: this.$t('adminFacilityInfo.travelGroup'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'TravelGencyName',
+            label: this.$t('adminFacilityInfo.apportionState'),
+            // width: '120',
+            align: 'center',
+            formatter:function(row){
+              return row.TravelGencyName==null?'未分配':'已分配'
+            }
+          },
+          {
+            prop: 'IsOnline',
+            label: this.$t('adminFacilityInfo.onlineState'),
+            // width: '120',
+            align: 'center',
+            formatter:function(row){
+              return row.IsOnline=='0'?'离线':'在线'
+            }
+          },
+          {
+            prop: 'Tel',
+            label: this.$t('adminFacilityInfo.tel'),
+            // width: '120',
+            align: 'center'
+          },
+        ]
       }
     },
     mounted(){

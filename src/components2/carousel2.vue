@@ -235,8 +235,11 @@
 
         if(this.$i18n.locale === 'zh'){
           this.$i18n.locale = 'en'
+          this.$store.state.showChinaOrEnglish = true
+
         }else if(this.$i18n.locale ==='en'){
           this.$i18n.locale = 'zh'
+          this.$store.state.showChinaOrEnglish = false
         }
       },
 
