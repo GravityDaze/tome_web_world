@@ -5,8 +5,8 @@
         <div class="logo_title_box">
           <div class="logo_icon"></div>
           <div class="logo_title">
-            <div>智慧北斗</div>
-            <div>Wisdom Beidou</div>
+            <div>智慧全域</div>
+            <div>SMART GUIDE</div>
           </div>
 
         </div>
@@ -350,7 +350,8 @@
   }
 
   .logo_title > div:nth-child(2) {
-    letter-spacing: 0.15em;
+    letter-spacing: 0.3em;
+    font-size: $font18;
   }
 
   .choose_version,.choose_version1{
