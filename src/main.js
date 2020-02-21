@@ -35,7 +35,7 @@ Vue.prototype.$qiniu = qiniu
 // Axios.defaults.baseURL = process.env.NODE_ENV === 'development'?'http://192.168.0.185:8080':'http://tome3pay.zhihuiquanyu.com';
 // Axios.defaults.baseURL = process.env.NODE_ENV === 'development'?'http://192.168.0.181:8080':'http://tome3pay.zhihuiquanyu.com';
 
-Axios.defaults.baseURL = process.env.NODE_ENV === 'development'?'http://192.168.0.107:8080':'http://192.168.0.103:8080';
+Axios.defaults.baseURL = process.env.NODE_ENV === 'development'?'http://192.168.0.115:8080':'http://192.168.0.103:8080';
 
 
 

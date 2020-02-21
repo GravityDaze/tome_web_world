@@ -49,7 +49,8 @@ export default {
     'travelGroup':'旅游团',
     'apportionState':'分配状态',
     'onlineState':'在线状态',
-    'tel':'手机号'
+    'tel':'手机号',
+    'state':'状态'
   },
   rfidInfo: {
     'no':'编号',
@@ -68,6 +69,29 @@ export default {
     'visitCount':'访问次数',
     'visitTime':'访问时间'
 
+  },
+  siteRfidInfo: {
+    'no':'编号',
+    'address':'地址',
+    'visitCount':'播报次数',
+    'sceneryProvider':'景区服务商',
+    'scenerySpotName':'旅游景点',
+    'createTime':'添加时间',
+    'visitRadius':'播报半径',
+  },
+  resetAmountListInfo: {
+    'sceneryProvider':'景区服务商',
+    'count':'次数'
+  },
+  groupPersonInfo: {
+    'num':'序号',
+    'name':'名称',
+    'phone':'手机号',
+    'type':'类型',
+    'certificateType':'证件类型/号码',
+    'codeMachine':'绑定终端',
+    'touristTeamName':'旅游团',
+    'updateTime':'更新时间'
   },
   singleText:{
     'alert':'警报',

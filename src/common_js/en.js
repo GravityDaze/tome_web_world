@@ -49,7 +49,8 @@ export default {
     'travelGroup':'travelGroup',
     'apportionState':'apportionState',
     'onlineState':'onlineState',
-    'tel':'phone'
+    'tel':'phone',
+    'state':'state'
   },
   rfidInfo: {
     'no':'no',
@@ -67,6 +68,29 @@ export default {
     'scenerySpotName':'scenerySpotName',
     'visitCount':'visitCount',
     'visitTime':'visitTime'
+  },
+  siteRfidInfo: {
+    'no':'no',
+    'address':'address',
+    'visitCount':'visitCount',
+    'sceneryProvider':'sceneryProvider',
+    'scenerySpotName':'scenerySpotName',
+    'createTime':'createTime',
+    'visitRadius':'visitRadius',
+  },
+  resetAmountListInfo: {
+    'sceneryProvider':'sceneryProvider',
+    'count':'count'
+  },
+  groupPersonInfo: {
+    'num':'num',
+    'name':'name',
+    'phone':'phone',
+    'type':'type',
+    'certificateType':'certificateType',
+    'codeMachine':'codeMachine',
+    'touristTeamName':'touristTeamName',
+    'updateTime':'updateTime'
   },
   singleText:{
     'alert':'ALERT',

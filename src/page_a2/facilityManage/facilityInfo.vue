@@ -177,50 +177,50 @@
           "TravelGencyID":'',
           "TravelGencyName":'',
         },
-        tableTitle: [
-          {
-            prop: 'IMEI',
-            label: '设备IMEI',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'CodeMachine',
-            label: '机器码',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'TouristTeamName',
-            label: '旅游团',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'IsOnline',
-            label: '在线状态',
-            // width: '120',
-            align: 'center',
-            formatter: function (row) {
-              return row.IsOnline == '0' ? '离线' : '在线'
-            }
-          },
-          {
-            prop: 'Status',
-            label: '状态',
-            // width: '120',
-            align: 'center',
-            formatter: function (row) {
-              return row.Status == '0' ? '禁用' : '启用'
-            }
-          },
-          {
-            prop: 'Tel',
-            label: '手机号码',
-            // width: '120',
-            align: 'center'
-          },
-        ],
+        // tableTitle: [
+        //   {
+        //     prop: 'IMEI',
+        //     label: '设备IMEI+++++',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'CodeMachine',
+        //     label: '机器码',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'TouristTeamName',
+        //     label: '旅游团',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'IsOnline',
+        //     label: '在线状态',
+        //     // width: '120',
+        //     align: 'center',
+        //     formatter: function (row) {
+        //       return row.IsOnline == '0' ? '离线' : '在线'
+        //     }
+        //   },
+        //   {
+        //     prop: 'Status',
+        //     label: '状态',
+        //     // width: '120',
+        //     align: 'center',
+        //     formatter: function (row) {
+        //       return row.Status == '0' ? '禁用' : '启用'
+        //     }
+        //   },
+        //   {
+        //     prop: 'Tel',
+        //     label: '手机号码',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        // ],
         tableData: [
           // {
           //   "ID": 1,
@@ -231,6 +231,54 @@
           //   "TravelGencyName": "智慧全域技术部测试机",
           //   "TouristTeamName": "成都测试i附近的卡拉季来得及凯撒"
           // }
+        ]
+      }
+    },
+    computed: {
+      tableTitle: function () {
+        return   [
+          {
+            prop: 'IMEI',
+            label: this.$t('adminFacilityInfo.imei'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'CodeMachine',
+            label: this.$t('adminFacilityInfo.codeMachine'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'TouristTeamName',
+            label: this.$t('adminFacilityInfo.travelGroup'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'IsOnline',
+            label: this.$t('adminFacilityInfo.onlineState'),
+            // width: '120',
+            align: 'center',
+            formatter: function (row) {
+              return row.IsOnline == '0' ? '离线' : '在线'
+            }
+          },
+          {
+            prop: 'Status',
+            label: this.$t('adminFacilityInfo.state'),
+            // width: '120',
+            align: 'center',
+            formatter: function (row) {
+              return row.Status == '0' ? '禁用' : '启用'
+            }
+          },
+          {
+            prop: 'Tel',
+            label: this.$t('adminFacilityInfo.tel'),
+            // width: '120',
+            align: 'center'
+          },
         ]
       }
     },
