@@ -143,18 +143,32 @@
         impowerFunctionIdsArr:[],
         commonId: '',
         dataTree: [],
-        tableTitle: [
+        // tableTitle: [
+        //   {
+        //     prop: 'Name',
+        //     label: '角色名称+7',
+        //     // width: '100',
+        //     align: 'center'
+        //   },
+        //
+        //
+        // ],
+        tableData: [],
+
+      }
+    },
+    computed: {
+      tableTitle: function () {
+        return  [
           {
             prop: 'Name',
-            label: '角色名称',
+            label: this.$t('roleManageInfo.roleName'),
             // width: '100',
             align: 'center'
           },
 
 
-        ],
-        tableData: [],
-
+        ]
       }
     },
     mounted() {

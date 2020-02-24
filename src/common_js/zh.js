@@ -93,6 +93,23 @@ export default {
     'touristTeamName':'旅游团',
     'updateTime':'更新时间'
   },
+  travelInfo: {
+    'travelName':'行程名称',
+    'touristTeamName':'旅游团',
+    'travelContent':'行程内容',
+    'createTime':'添加时间'
+  },
+  alertInfo: {
+    'alert':'报警',
+    'codeMachine':'设备号',
+    'memberNameTel':'游客名/电话',
+    'guiderNameTel':'导游名/电话',
+    'touristTeamName':'旅游团',
+    'alertTime':'报警时间'
+  },
+  roleManageInfo: {
+    'roleName':'角色名称'
+  },
   singleText:{
     'alert':'警报',
     'search':'查询',

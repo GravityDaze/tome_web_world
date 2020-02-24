@@ -133,44 +133,44 @@
         isImportParam: false,
         isShowEnabled: true,
         isHandle: true,
-        tableTitle: [
-          {
-            prop: 'NO',
-            label: '编号',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'Address',
-            label: '地址',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'VisitCount',
-            label: '播报次数',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'TravelGencyName',
-            label: '景区服务商',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'ScenicName',
-            label: '旅游景点',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'CreateTime',
-            label: '添加时间',
-            // width: '120',
-            align: 'center'
-          },
-        ],
+        // tableTitle: [
+        //   {
+        //     prop: 'NO',
+        //     label: '编号++++',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'Address',
+        //     label: '地址----',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'VisitCount',
+        //     label: '播报次数',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'TravelGencyName',
+        //     label: '景区服务商',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'ScenicName',
+        //     label: '旅游景点',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'CreateTime',
+        //     label: '添加时间',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        // ],
         tableData: [
           // {
           //   "Address": "麦田中心1103",
@@ -198,6 +198,48 @@
           "ScenicID":'',
           "TravelSpotName":'',
         },
+      }
+    },
+    computed: {
+      tableTitle: function () {
+        return   [
+          {
+            prop: 'NO',
+            label: this.$t('rfidInfo.no'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'Address',
+            label: this.$t('rfidInfo.address'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'VisitCount',
+            label: this.$t('rfidInfo.visitCount'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'TravelGencyName',
+            label:this.$t('rfidInfo.sceneryProvider'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'ScenicName',
+            label: this.$t('rfidInfo.scenerySpotName'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'CreateTime',
+            label: this.$t('rfidInfo.createTime'),
+            // width: '120',
+            align: 'center'
+          },
+        ]
       }
     },
     mounted() {

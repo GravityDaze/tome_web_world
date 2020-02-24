@@ -92,6 +92,23 @@ export default {
     'touristTeamName':'touristTeamName',
     'updateTime':'updateTime'
   },
+  travelInfo: {
+    'travelName':'travelName',
+    'touristTeamName':'touristTeamName',
+    'travelContent':'travelContent',
+    'createTime':'createTime'
+  },
+  alertInfo: {
+    'alert':'alert',
+    'codeMachine':'codeMachine',
+    'memberNameTel':'memberName/tel',
+    'guiderNameTel':'guiderName/tel',
+    'touristTeamName':'touristTeamName',
+    'alertTime':'alertTime'
+  },
+  roleManageInfo: {
+    'roleName':'roleName'
+  },
   singleText:{
     'alert':'ALERT',
     'search':'Search',

@@ -188,23 +188,76 @@
           "Content": "",
           "Subject": ""
         },
-        tableTitle: [
+        // tableTitle: [
+        //   {
+        //     prop: 'Subject',
+        //     label: '行程名称++',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'TouristTeamName',
+        //     label: '旅游团',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //
+        //   {
+        //     prop: 'Content',
+        //     label: '行程内容',
+        //     // width: '120',
+        //     align: 'center',
+        //     formatter: function(row){
+        //
+        //       if(row.Content.length > 20){
+        //         return row.Content.substring(0,20)
+        //       }else {
+        //         return row.Content
+        //       }
+        //     }
+        //   },
+        //
+        //   {
+        //     prop: 'CreateTime',
+        //     label: '添加时间',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //
+        // ],
+        tableData: [
+          // {
+          //   "Content": "333321313",
+          //   "ID": 1262,
+          //   "Subject": "123",
+          //   "CreateTime": "2019-02-02 14:51:56",
+          //   "TouristTeamID": 4,
+          //   "TouristTeamName": "赤水"
+          //
+          // }
+        ]
+
+      }
+    },
+    computed: {
+      tableTitle: function () {
+        return  [
           {
             prop: 'Subject',
-            label: '行程名称',
+            label: this.$t('travelInfo.travelName'),
             // width: '120',
             align: 'center'
           },
           {
             prop: 'TouristTeamName',
-            label: '旅游团',
+            label: this.$t('travelInfo.touristTeamName'),
             // width: '120',
             align: 'center'
           },
 
           {
             prop: 'Content',
-            label: '行程内容',
+            label: this.$t('travelInfo.travelContent'),
             // width: '120',
             align: 'center',
             formatter: function(row){
@@ -219,24 +272,12 @@
 
           {
             prop: 'CreateTime',
-            label: '添加时间',
+            label: this.$t('travelInfo.createTime'),
             // width: '120',
             align: 'center'
           },
 
-        ],
-        tableData: [
-          // {
-          //   "Content": "333321313",
-          //   "ID": 1262,
-          //   "Subject": "123",
-          //   "CreateTime": "2019-02-02 14:51:56",
-          //   "TouristTeamID": 4,
-          //   "TouristTeamName": "赤水"
-          //
-          // }
         ]
-
       }
     },
     mounted(){
