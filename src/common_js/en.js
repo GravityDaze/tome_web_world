@@ -84,13 +84,15 @@ export default {
   },
   groupPersonInfo: {
     'num':'num',
+    'sceneryProviderName':'sceneryProviderName',
     'name':'name',
     'phone':'phone',
     'type':'type',
     'certificateType':'certificateType',
     'codeMachine':'codeMachine',
     'touristTeamName':'touristTeamName',
-    'updateTime':'updateTime'
+    'updateTime':'updateTime',
+    'state':'state'
   },
   travelInfo: {
     'travelName':'travelName',
@@ -114,6 +116,25 @@ export default {
     'loginAccountNum':'loginAccountNum',
     'address':'address',
     'roleName':'roleName'
+  },
+  areaSceneryListInfo: {
+    'sceneryProviderId':'sceneryProviderId',
+    'sceneryProviderName':'sceneryProviderName',
+    'loginName':'loginName',
+    'deviceAcount':'deviceAcount',
+    'onlineAcount':'onlineAcount',
+    'offlineAcount':'offlineAcount',
+    'dutyName':'dutyName',
+    'dutyPhone':'dutyPhone',
+    'address':'address'
+  },
+  areaGroupPersonListInfo: {
+    'name':'name',
+    'isOnline':'isOnline'
+  },
+  areaManageListInfo: {
+    'areaName':'areaName',
+    'loginName':'loginName'
   },
   singleText:{
     'alert':'ALERT',

@@ -85,13 +85,15 @@ export default {
   },
   groupPersonInfo: {
     'num':'序号',
+    'sceneryProviderName':'景区服务商',
     'name':'名称',
     'phone':'手机号',
     'type':'类型',
     'certificateType':'证件类型/号码',
     'codeMachine':'绑定终端',
     'touristTeamName':'旅游团',
-    'updateTime':'更新时间'
+    'updateTime':'更新时间',
+    'state':'状态'
   },
   travelInfo: {
     'travelName':'行程名称',
@@ -115,6 +117,25 @@ export default {
     'loginAccountNum':'登录账号',
     'address':'地址',
     'roleName':'角色名称'
+  },
+  areaSceneryListInfo: {
+    'sceneryProviderId':'景区服务商ID',
+    'sceneryProviderName':'景区服务商名称',
+    'loginName':'登录名',
+    'deviceAcount':'设备总数',
+    'onlineAcount':'在线总数',
+    'offlineAcount':'离线总数',
+    'dutyName':'负责人姓名',
+    'dutyPhone':'负责人电话',
+    'address':'通讯地址'
+  },
+  areaGroupPersonListInfo: {
+    'name':'姓名',
+    'isOnline':'是否在线'
+  },
+  areaManageListInfo: {
+    'areaName':'片区名称',
+    'loginName':'登录名'
   },
   singleText:{
     'alert':'警报',

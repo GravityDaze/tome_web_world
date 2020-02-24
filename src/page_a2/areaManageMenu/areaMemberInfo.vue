@@ -339,77 +339,77 @@
         },
 
         isHandle: true,
-        tableTitle: [
-          {
-            prop: 'Num',
-            label: '序号',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'TravelGencyName',
-            label: '景区服务商',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'Name',
-            label: '名称',
-            // width: '120',
-            align: 'center'
-          },
-
-          {
-            prop: 'Phone',
-            label: '手机号',
-            // width: '120',
-            align: 'center',
-          },
-
-          {
-            prop: 'Type',
-            label: '类型',
-            // width: '120',
-            align: 'center',
-            formatter: function (row) {
-              return row.Type == '0' ? '游客' : '导游'
-            }
-          },
-          {
-            prop: 'CertificateNumber',
-            label: '证件（类型/号码）',
-            // width: '120',
-            align: 'center',
-          },
-          {
-            prop: 'CodeMachine',
-            label: '绑定终端',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'TouristTeamName',
-            label: '旅游团',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'UpdateTime',
-            label: '更新时间',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'Status',
-            label: '状态',
-            // width: '120',
-            align: 'center',
-            formatter: function (row) {
-              return row.Status == 0 ? '禁用' : '启用'
-            }
-          },
-
-        ],
+        // tableTitle: [
+        //   {
+        //     prop: 'Num',
+        //     label: '序号778899',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'TravelGencyName',
+        //     label: '景区服务商',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'Name',
+        //     label: '名称',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //
+        //   {
+        //     prop: 'Phone',
+        //     label: '手机号',
+        //     // width: '120',
+        //     align: 'center',
+        //   },
+        //
+        //   {
+        //     prop: 'Type',
+        //     label: '类型',
+        //     // width: '120',
+        //     align: 'center',
+        //     formatter: function (row) {
+        //       return row.Type == '0' ? '游客' : '导游'
+        //     }
+        //   },
+        //   {
+        //     prop: 'CertificateNumber',
+        //     label: '证件（类型/号码）',
+        //     // width: '120',
+        //     align: 'center',
+        //   },
+        //   {
+        //     prop: 'CodeMachine',
+        //     label: '绑定终端',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'TouristTeamName',
+        //     label: '旅游团',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'UpdateTime',
+        //     label: '更新时间',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'Status',
+        //     label: '状态',
+        //     // width: '120',
+        //     align: 'center',
+        //     formatter: function (row) {
+        //       return row.Status == 0 ? '禁用' : '启用'
+        //     }
+        //   },
+        //
+        // ],
         tableData: [
           // {
           //   "ID": 7181,
@@ -431,6 +431,81 @@
           // }
         ]
 
+      }
+    },
+    computed: {
+      tableTitle: function () {
+        return  [
+          {
+            prop: 'Num',
+            label: this.$t('groupPersonInfo.num'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'TravelGencyName',
+            label: this.$t('groupPersonInfo.sceneryProviderName'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'Name',
+            label: this.$t('groupPersonInfo.name'),
+            // width: '120',
+            align: 'center'
+          },
+
+          {
+            prop: 'Phone',
+            label: this.$t('groupPersonInfo.phone'),
+            // width: '120',
+            align: 'center',
+          },
+
+          {
+            prop: 'Type',
+            label: this.$t('groupPersonInfo.type'),
+            // width: '120',
+            align: 'center',
+            formatter: function (row) {
+              return row.Type == '0' ? '游客' : '导游'
+            }
+          },
+          {
+            prop: 'CertificateNumber',
+            label: this.$t('groupPersonInfo.certificateType'),
+            // width: '120',
+            align: 'center',
+          },
+          {
+            prop: 'CodeMachine',
+            label: this.$t('groupPersonInfo.codeMachine'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'TouristTeamName',
+            label: this.$t('groupPersonInfo.touristTeamName'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'UpdateTime',
+            label: this.$t('groupPersonInfo.updateTime'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'Status',
+            label: this.$t('groupPersonInfo.state'),
+            // width: '120',
+            align: 'center',
+            formatter: function (row) {
+              return row.Status == 0 ? '禁用' : '启用'
+            }
+          },
+
+        ]
       }
     },
     mounted() {

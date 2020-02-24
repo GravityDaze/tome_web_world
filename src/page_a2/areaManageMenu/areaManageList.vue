@@ -153,22 +153,22 @@
           "UserPwd": "",
           'id': ''
         },
-        tableTitle: [
-
-          {
-            prop: 'Name',
-            label: '片区名称',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'User',
-            label: '登录名',
-            // width: '120',
-            align: 'center'
-          },
-
-        ],
+        // tableTitle: [
+        //
+        //   {
+        //     prop: 'Name',
+        //     label: '片区名称^^^^',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'User',
+        //     label: '登录名',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //
+        // ],
         tableData: [
           // {
           //   "ID": 15,
@@ -207,6 +207,26 @@
           //   "gencyAddress": null
           //
           // }
+        ]
+      }
+    },
+    computed: {
+      tableTitle: function () {
+        return  [
+
+          {
+            prop: 'Name',
+            label: this.$t('areaManageListInfo.areaName'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'User',
+            label: this.$t('areaManageListInfo.loginName'),
+            // width: '120',
+            align: 'center'
+          },
+
         ]
       }
     },

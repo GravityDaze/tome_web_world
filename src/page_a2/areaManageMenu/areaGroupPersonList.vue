@@ -299,29 +299,29 @@
           "Mode": '',//0 一次接听就停止  1 循环拨打
 
         },
-        tableTitle: [
-          {
-            prop: 'Name',
-            label: '姓名',
-            // width: '600',
-            align: 'center'
-          },
-
-          {
-            prop: 'isOnLine',
-            label: '是否在线',
-            // width: '500',
-            align: 'center',
-            formatter: function (row) {
-              if (row.isOnLine == '0') {
-                return '离线'
-              } else if (row.isOnLine == '1') {
-                return '在线'
-              }
-            }
-          },
-
-        ],
+        // tableTitle: [
+        //   {
+        //     prop: 'Name',
+        //     label: '姓名666',
+        //     // width: '600',
+        //     align: 'center'
+        //   },
+        //
+        //   {
+        //     prop: 'isOnLine',
+        //     label: '是否在线',
+        //     // width: '500',
+        //     align: 'center',
+        //     formatter: function (row) {
+        //       if (row.isOnLine == '0') {
+        //         return '离线'
+        //       } else if (row.isOnLine == '1') {
+        //         return '在线'
+        //       }
+        //     }
+        //   },
+        //
+        // ],
         tableData: [
           // {
           //   Name: '103018',
@@ -363,6 +363,33 @@
             ]
           }
         ],
+      }
+    },
+    computed: {
+      tableTitle: function () {
+        return   [
+          {
+            prop: 'Name',
+            label: this.$t('areaGroupPersonListInfo.name'),
+            // width: '600',
+            align: 'center'
+          },
+
+          {
+            prop: 'isOnLine',
+            label: this.$t('areaGroupPersonListInfo.isOnline'),
+            // width: '500',
+            align: 'center',
+            formatter: function (row) {
+              if (row.isOnLine == '0') {
+                return '离线'
+              } else if (row.isOnLine == '1') {
+                return '在线'
+              }
+            }
+          },
+
+        ]
       }
     },
     mounted() {
