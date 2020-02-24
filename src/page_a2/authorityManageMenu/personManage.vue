@@ -82,33 +82,33 @@
             Name: '景区权限'
           },
         ],
-        tableTitle: [
-          {
-            prop: 'Name',
-            label: '景区名称',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'UserAccount',
-            label: '登录账号',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'Address',
-            label: '地址',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'RoleName',
-            label: '角色名称',
-            // width: '120',
-            align: 'center'
-          },
-
-        ],
+        // tableTitle: [
+        //   {
+        //     prop: 'Name',
+        //     label: '景区名称+++',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'UserAccount',
+        //     label: '登录账号----',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'Address',
+        //     label: '地址',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'RoleName',
+        //     label: '角色名称',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //
+        // ],
         tableData: [
           // {
           //   "ID": 1262,
@@ -119,6 +119,37 @@
           //   "RoleName": null
           //
           // }
+        ]
+      }
+    },
+    computed: {
+      tableTitle: function () {
+        return  [
+          {
+            prop: 'Name',
+            label: this.$t('personManageInfo.sceneryName'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'UserAccount',
+            label: this.$t('personManageInfo.loginAccountNum'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'Address',
+            label: this.$t('personManageInfo.address'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'RoleName',
+            label: this.$t('personManageInfo.roleName'),
+            // width: '120',
+            align: 'center'
+          },
+
         ]
       }
     },

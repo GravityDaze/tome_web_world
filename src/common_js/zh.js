@@ -110,6 +110,12 @@ export default {
   roleManageInfo: {
     'roleName':'角色名称'
   },
+  personManageInfo: {
+    'sceneryName':'景区名称',
+    'loginAccountNum':'登录账号',
+    'address':'地址',
+    'roleName':'角色名称'
+  },
   singleText:{
     'alert':'警报',
     'search':'查询',

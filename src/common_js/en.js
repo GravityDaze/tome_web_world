@@ -109,6 +109,12 @@ export default {
   roleManageInfo: {
     'roleName':'roleName'
   },
+  personManageInfo: {
+    'sceneryName':'sceneryName',
+    'loginAccountNum':'loginAccountNum',
+    'address':'address',
+    'roleName':'roleName'
+  },
   singleText:{
     'alert':'ALERT',
     'search':'Search',
