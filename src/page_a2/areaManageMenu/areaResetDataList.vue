@@ -39,22 +39,22 @@
         isExportDevice: true,
         isShowEnabled: true,
         isHandle: false,
-        tableTitle: [
-          {
-            prop: 'travelGencyName',
-            label: '景区服务商',
-            // width: '120',
-            align: 'center'
-          },
-          {
-            prop: 'count',
-            label: '次数',
-            // width: '120',
-            align: 'center'
-          },
-
-
-        ],
+        // tableTitle: [
+        //   {
+        //     prop: 'travelGencyName',
+        //     label: '景区服务商....',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //   {
+        //     prop: 'count',
+        //     label: '次数321',
+        //     // width: '120',
+        //     align: 'center'
+        //   },
+        //
+        //
+        // ],
         tableData: [
           // {
           //   "travelGencyName": "新疆矿山公园景区",
@@ -63,6 +63,26 @@
           // }
         ]
 
+      }
+    },
+    computed: {
+      tableTitle: function () {
+        return   [
+          {
+            prop: 'travelGencyName',
+            label: this.$t('resetAmountListInfo.sceneryProvider'),
+            // width: '120',
+            align: 'center'
+          },
+          {
+            prop: 'count',
+            label: this.$t('resetAmountListInfo.count'),
+            // width: '120',
+            align: 'center'
+          },
+
+
+        ]
       }
     },
     mounted() {
