@@ -30,14 +30,14 @@ Vue.use(Vuex);
 Vue.prototype.$axios = Axios;
 Vue.prototype.$echarts = echarts
 Vue.prototype.$qiniu = qiniu
-// Axios.defaults.baseURL = process.env.NODE_ENV === 'development'?'http://tome3pay.zhihuiquanyu.com':'http://47.92.104.251:8080';
+Axios.defaults.baseURL = process.env.NODE_ENV === 'development'?'http://tome3pay.zhihuiquanyu.com':'http://47.92.104.251:8080';
 // Axios.defaults.baseURL = process.env.NODE_ENV === 'development'?'http://192.168.0.103:8080':'https://tome3pay.zhihuiquanyu.com';
 // Axios.defaults.baseURL = process.env.NODE_ENV === 'development'?'http://192.168.0.185:8080':'http://tome3pay.zhihuiquanyu.com';
 // Axios.defaults.baseURL = process.env.NODE_ENV === 'development'?'http://192.168.0.181:8080':'http://tome3pay.zhihuiquanyu.com';
 
-Axios.defaults.baseURL = process.env.NODE_ENV === 'development'?'http://192.168.0.122:8080':'http://192.168.0.103:8080';
+// Axios.defaults.baseURL = process.env.NODE_ENV === 'development'?'http://192.168.0.122:8080':'http://192.168.0.103:8080';
 
-
+// Axios.defaults.baseURL = process.env.NODE_ENV === 'development'?'http://192.168.0.122:8088':'http://192.168.0.103:8080';
 
 // 引入组件
 import carousel from './components/carousel';//轮播组件

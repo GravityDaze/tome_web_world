@@ -184,7 +184,7 @@
     </div>
     <!--第三个是授权景区模态框-->
     <div id="sceneryAllInfo">
-      <el-dialog title="授权景区" :visible.sync="$store.state.impowerScenerySign" width="40%" align="left"
+      <el-dialog title="授权景区" :visible.sync="$store.state.impowerScenerySign" width="48%" align="left"
                  :close-on-click-modal="false">
         <el-form :model="ruleFormImpowerScenery" ref="ruleFormImpowerScenery"
                  label-width="100px" class="demo-ruleForm" size="small"

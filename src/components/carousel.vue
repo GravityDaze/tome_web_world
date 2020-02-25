@@ -18,7 +18,7 @@
       <div class="top3_2" @click="goNewPage">
         <span class="my_hover">{{$store.state.allScopeUserName}}</span>
       </div>
-      <div class="top3_3 my_hover" @click="changeLanguageFn">
+      <div class="top3_3 my_hover" @click="changeLanguageFn" style="opacity: 0">
         {{$t('singleText.language')}}
       </div>
       <div class="select_info_box">
