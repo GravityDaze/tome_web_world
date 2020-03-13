@@ -367,6 +367,7 @@
       //导入设备（上传excel）
 
       //导出信息为excel格式表
+      //第一个导出方法是可以选择页数分别导出数据（目前因为要满足全部导出，所有将每页显示数目固定设置为一个较大值10000,但数据过大时导致页面崩溃。所以暂时延用之前的方法分页），第二个是全部导出但还在研发中
       exportInfo() {
 
         var n = ''
@@ -384,7 +385,7 @@
               "IMEI": this.$store.state.imeiNumParam,
               "IsOnline":  this.$store.state.isOnLineStateParam2,//是否在线
               "pageNum": this.$store.state.pageNumParam,
-              "pageSize": this.$store.state.pageSizeParam
+              "pageSize": this.$store.state.pageSizeParam,
             }
           }
         ).then(res => {
@@ -411,6 +412,27 @@
         // commonFn.exportExcel(n, k)
       },
 
+      exportInfosss(){
+        this.$axios(
+          {
+            method: 'post',
+            url: '/a2guider/terminal/exportTerminal',
+            data: {
+              "Status": '',
+              "TouristTeamID": '',//暂时没有展示这栏
+              "CodeMachine": '',
+              "Tel":  '',
+              "IMEI": '',
+              "pageNum": '',
+              "pageSize": ''
+            }
+          }
+        ).then(res => {
+          console.log('导出设备全部数据返回了什么：',res.data)
+        }).catch(error => {
+
+        })
+      },
 
 
       //获取景区服务商下拉列表信息
