@@ -302,7 +302,7 @@ export default {
     editor:'编辑',
     addGroup:'新增团',
     editGroup:'编辑团',
-    closeGroup:'关闭旅欧团',
+    closeGroup:'关闭旅游团',
     enabled:'启用',
     disabled:'禁用',
     abandon:'弃用',

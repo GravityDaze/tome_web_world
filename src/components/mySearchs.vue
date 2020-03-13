@@ -2330,12 +2330,10 @@
   }
 
   .btn_box2 > div {
-    /*
-        border-bottom: 1px solid $gray;
-    */
+      /*  border-bottom: 1px solid $gray;*/
     display: inline-block;
-    width: 0.8rem;
-    min-width: 75px;
+    width: 1.25rem;
+    min-width: 80px;
     text-align: center;
     color: $white;
     margin-right: 0.2rem;
