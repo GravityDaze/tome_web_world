@@ -612,7 +612,7 @@
 
       //提交编辑信息
       editorInfo(){
-        this.ruleForm.Status = this.ruleForm.Status == '启用'?'1':'0'
+        // this.ruleForm.Status = this.ruleForm.Status == '启用'?'1':'0'
         this.$axios(
           {
             method:'post',

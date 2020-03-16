@@ -116,11 +116,11 @@ const state = {
   guideTelParam: '',//代表用户中的具体导游手机号
   registerDateParam: '',//代表用户注册日期
   pageNumParam: 1,//代表当前页数
-  pageSizeParam: 5,//代表每页显示多少条
+  pageSizeParam: 10,//代表每页显示多少条
   totalParam: 90,//代表总条数
 
   pageNumParamX: 1,//代表X当前页数X
-  pageSizeParamX: 8,//代表X每页显示多少条
+  pageSizeParamX: 10,//代表X每页显示多少条
   totalParamX: 190,//代表X总条数
   //以上为查询对应参数数据
   showLoading: false,

@@ -340,7 +340,7 @@ export default {
     exportFacility:'导出设备',
     downloadExcelTemplate:'下载excel模板',
     clearTravel:'清空行程',
-    clearAlert:'清空报警',
+    clearAlert:'清空警报',
     userLog:'用户日志',
     operatorLog:'操作员日志',
     businessLog:'业务日志',
