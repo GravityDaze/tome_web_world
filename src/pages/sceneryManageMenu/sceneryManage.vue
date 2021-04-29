@@ -19,7 +19,6 @@
       :sceneryState="sceneryState"
       :affilitedArea="affilitedArea"
       :coverageName="coverageName"
-
       :isAdd="isAdd"
       :isEditor="isEditor"
       :isEnabled="isEnabled"
@@ -1684,7 +1683,6 @@
         var point = new BMap.Point(104.346071, 33.678385);
         map.centerAndZoom(point, 13);
         map.enableScrollWheelZoom();//启用滚轮放大缩小
-
 
         //鼠标绘制图层方法函数如下
         that.overlaycomplete = function (e) {

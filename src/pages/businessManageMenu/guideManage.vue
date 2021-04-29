@@ -13,6 +13,7 @@
       :isCancelIdentification="isCancelIdentification"
       :isRelevanceGuide="isRelevanceGuide"
       :isCancelRelevanceGuide="isCancelRelevanceGuide"
+      :isAddGuide="true"
       @queryInfos="queryInfos"
       @enableInfoSss="enableInfoSss"
       @disableInfoSss="disableInfoSss"
@@ -47,7 +48,7 @@
             <el-col :span="10" :offset="3">
               <el-form-item label="登录手机号">
                 <el-col>
-                  <el-input v-model="ruleForm.customerPhone" disabled="disabled"></el-input>
+                  <el-input v-model="ruleForm.phone"></el-input>
                 </el-col>
 
               </el-form-item>
@@ -77,10 +78,10 @@
 
               </el-form-item>
             </el-col>
-            <el-col :span="10" :offset="3">
-              <el-form-item label="SOS紧急电话">
+             <el-col :span="10" :offset="3">
+              <el-form-item label="预留团号">
                 <el-col>
-                  <el-input v-model="ruleForm.sosPhone"></el-input>
+                  <el-input v-model="ruleForm.teamCode"></el-input>
                 </el-col>
 
               </el-form-item>
@@ -112,14 +113,14 @@
 
               </el-form-item>
             </el-col>
-            <el-col :span="10" :offset="3">
+            <!-- <el-col :span="10" :offset="3">
               <el-form-item label="预留团号">
                 <el-col>
                   <el-input v-model="ruleForm.teamCode"></el-input>
                 </el-col>
 
               </el-form-item>
-            </el-col>
+            </el-col> -->
 
           </el-row>
           <el-form-item>
@@ -249,6 +250,7 @@
         apiSearchGuideNum: '/mis/guide/getByGuideCard',//关联导游时，查询导游证号
         apiEditorGet: '/mis/guide/get',
         apiEditor: '/mis/guide/edit',
+        apiAdd:'/mis/guide/add',
         apiEnable: '/mis/guide/auth',//一般代表启用接口，此处特例代表资格认证接口
         apiDisable: '/mis/guide/cancelAuth',//一般代表禁用接口，此处特例代表取消认证接口
         apiRelationTravelAgency: '/mis/guide/confirmRelationTravelAgency',//关联旅行社
@@ -361,7 +363,7 @@
 
         ruleForm: {
           "no": "",
-          "customerPhone": "",//登录手机号
+          "phone": "",//登录手机号
           "id": "",
           "credentialsNumber": "",//身份证号
           "realName": "",
@@ -420,6 +422,32 @@
       this.getDefaultInfo()
     },
     methods: {
+      
+      addGuide(){
+        this.ruleForm.sex = this.ruleForm.sex == '男' ? '1' : '2'
+        this.ruleForm.isCreateTeam = this.ruleForm.isCreateTeam == '不允许' ? '0' : '1'
+        // 验证是否是手机
+        if( !/^1[0-9]{10}$/.test(this.ruleForm.phone) ) return this.$message.error('不合法的手机号')
+        this.ruleForm.sosPhone = this.ruleForm.phone
+        this.$axios(
+          {
+            method: 'post',
+            url: this.apiAdd,
+            data: this.ruleForm
+          }
+        ).then(res => {
+          console.log('编辑接口成功返回数据', res.data)
+          if (res.data.resultStatus.resultCode === '0000') {
+            this.$store.state.guideManageSign = false
+            this.getDefaultInfo()
+          } else {
+            this.$message.warning(res.data.resultStatus.resultMessage)
+          }
+        }).catch(error => {
+
+        })
+      },
+      
       //获取默认列表信息方法
       getDefaultInfo() {
         var that = this
@@ -676,7 +704,7 @@
               // this.$store.state.guideManageSign = false
 
               if (this.$store.state.titleHeader === '新增') {
-
+                this.addGuide()
               } else if (this.$store.state.titleHeader === '编辑') {
                 this.editorInfo()
               }

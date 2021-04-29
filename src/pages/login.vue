@@ -181,9 +181,11 @@
 
             // this.test()
           } else {
+            this.refreshCode()
             this.$message.warning(res.data.resultStatus.resultMessage)
           }
         }).catch(err => {
+          this.refreshCode()
           console.log(err)
         })
       },
@@ -191,7 +193,6 @@
       //登录事件A2
       loginA2() {
         var that = this
-        console.log('点击登录A2')
         if(!this.username){
           this.$message.warning('用户名不能为空')
           return
@@ -217,7 +218,6 @@
           }
         ).then(res => {
 
-          console.log(res, 'A2登录接口已经通了',this.$store.state.roleStatusNum)
 
           if (res.data.resultStatus.resultCode === '0000') {
             this.$store.state.roleStatusNum = res.data.value.status
@@ -238,7 +238,6 @@
                 data:{}
               }
             ).then(res => {
-              console.log('获取到的权限接口数据：+++',res.data)
               if(res.data.resultStatus.resultCode === '0000'){
                 var menuK = res.data.value
                 console.log('this.$store.state.menuVarArr:',this.$store.state.menuVarArr,'menuK:+',menuK)
@@ -266,16 +265,6 @@
           console.log(err)
         })
       },
-
-      //test
-      test() {
-        console.log('开始测试token是否放到请求头了')
-        this.$axios.get(this.apiTest)
-          .then(res => {
-            console.log(res)
-          })
-
-      }
     },
     mounted() {
       console.log('开始初始化了', this.$store)

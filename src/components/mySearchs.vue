@@ -830,6 +830,7 @@
       <div class="btn_box2">
         <div class="my_hover" v-if="isAdd" @click="openAddEditorDialog('新增')">{{$t('btnInfo.add')}}</div>
         <div class="my_hover" v-if="isAddAdd2" @click="addSceneryToArea">添加</div>
+        <div class="my_hover" v-if="isAddGuide" @click="openAddEditorDialog('新增')">添加</div>
 
         <div class="my_hover" v-if="isAreaManage" @click="areaInfoSearch">{{$t('btnInfo.areaManage')}}</div>
 
@@ -1468,13 +1469,14 @@
     },
     //isQueryInfosX在二级列表里面查询是用于判断是点击的一级查询按钮还是二级查询按钮
     //sceneryLanguageSetTwoEventParam在二级列表里面点击的启用禁用等时间
-    props: ['eventParam', 'sceneryLanguageSetTwoEventParam', 'isQueryInfosX', 'rfidCountInfoShowData', 'sign', 'areaSearchParam', 'titleInfo', 'isToolBar', 'sceneryName', 'deptName', 'affiliatedScenery', 'affiliatedSceneryRRR', 'affiliatedAreaRRR', 'affiliatedSpot', 'spotName', 'facilitySort', 'businessType', 'groupPersonType', 'alertType', 'touristGroup2', 'touristGroup2DropDownList', 'sexType', 'roadLineType', 'facilityName', 'roadLineName', 'codeMachine', 'imeiNum', 'serviceProviderSerialNum', 'roleName', 'jurisdictionTag', 'serviceProviderName', 'operatorName', 'serviceProviderLinkMan', 'userTel', 'guideTel', 'guideSerialNum', 'monthDate', 'registerDate', 'userSerialNum', 'rfidSerialNum', 'rfidType', 'mediaFileSerialNum', 'mediaFileName', 'mediaType', 'canChooseSceneryArr', 'canChooseScenery', 'a2ChooseServiceProvider', 'a2ChooseServiceProviderArr', 'messageHeader', 'publishType', 'sosTime', 'visitDate', 'publishDate', 'rentTime', 'paramKey', 'paramValue', 'editorScope', 'publishState', 'publishStateK', 'reset', 'versionNum', 'routeNameShow', 'sosDateShow', 'dateShow', 'isOccupyPlace', 'railName', 'allocationState', 'sceneryState', 'isOnLineState', 'myUpdateState', 'touristState', 'sceneryGrade', 'affilitedArea', 'affiliatedTourCompany', 'tourCompanyName', 'searchIfInfo', 'loginName', 'personName', 'groupNum', 'createGroupTime', 'createGroupTime2', 'coverageName', 'travelInfoName', 'isAmountStatistics', 'isRfidAmountStatistics', 'isClearTravelInfo', 'isClearAlert', 'isReturn', 'isAdd', 'isAddAdd2', 'isAreaManage', 'isAddQ', 'isMoreDel', 'isEditor', 'isEditorQ', 'isCloseTouristGroup', 'isEnabled', 'isDisabled', 'isAbandon', 'isCoverageManage', 'isRailTips', 'isSceneryScope', 'isShutdown', 'isLanguageSet', 'isResourcePack', 'isMapPreview', 'isSceneryAllInfo', 'isScenerySpotAllInfo', 'isDel', 'isSureMessage', 'isSosDispose', 'isAdjustTourCompany', 'isQualificationIdentification', 'isCancelIdentification', 'isRelevanceGuide', 'isCancelRelevanceGuide', 'isPublish', 'isCancelPublish', 'isTerminalUpdateInfo', 'isAddDevice', 'isSynToRedis', 'isImpower', 'isImpowerScenery', 'isRoleImpower', 'isFunctionImpower', 'isReloadImpower', 'isResetPassword', 'isAllotDevice', 'isImportRfid', 'isImportDevice', 'isExportDevice', 'isImportParam'],
+    props: ['eventParam', 'sceneryLanguageSetTwoEventParam', 'isQueryInfosX', 'rfidCountInfoShowData', 'sign', 'areaSearchParam', 'titleInfo', 'isToolBar', 'sceneryName', 'deptName', 'affiliatedScenery', 'affiliatedSceneryRRR', 'affiliatedAreaRRR', 'affiliatedSpot', 'spotName', 'facilitySort', 'businessType', 'groupPersonType', 'alertType', 'touristGroup2', 'touristGroup2DropDownList', 'sexType', 'roadLineType', 'facilityName', 'roadLineName', 'codeMachine', 'imeiNum', 'serviceProviderSerialNum', 'roleName', 'jurisdictionTag', 'serviceProviderName', 'operatorName', 'serviceProviderLinkMan', 'userTel', 'guideTel', 'guideSerialNum', 'monthDate', 'registerDate', 'userSerialNum', 'rfidSerialNum', 'rfidType', 'mediaFileSerialNum', 'mediaFileName', 'mediaType', 'canChooseSceneryArr', 'canChooseScenery', 'a2ChooseServiceProvider', 'a2ChooseServiceProviderArr', 'messageHeader', 'publishType', 'sosTime', 'visitDate', 'publishDate', 'rentTime', 'paramKey', 'paramValue', 'editorScope', 'publishState', 'publishStateK', 'reset', 'versionNum', 'routeNameShow', 'sosDateShow', 'dateShow', 'isOccupyPlace', 'railName', 'allocationState', 'sceneryState', 'isOnLineState', 'myUpdateState', 'touristState', 'sceneryGrade', 'affilitedArea', 'affiliatedTourCompany', 'tourCompanyName', 'searchIfInfo', 'loginName', 'personName', 'groupNum', 'createGroupTime', 'createGroupTime2', 'coverageName', 'travelInfoName', 'isAmountStatistics', 'isRfidAmountStatistics', 'isClearTravelInfo', 'isClearAlert', 'isReturn', 'isAdd', 'isAddAdd2', 'isAreaManage', 'isAddQ', 'isMoreDel', 'isEditor', 'isEditorQ', 'isCloseTouristGroup', 'isEnabled', 'isDisabled', 'isAbandon', 'isCoverageManage', 'isRailTips', 'isSceneryScope', 'isShutdown', 'isLanguageSet', 'isResourcePack', 'isMapPreview', 'isSceneryAllInfo', 'isScenerySpotAllInfo', 'isDel', 'isSureMessage', 'isSosDispose', 'isAdjustTourCompany', 'isQualificationIdentification', 'isCancelIdentification', 'isRelevanceGuide', 'isCancelRelevanceGuide', 'isPublish', 'isCancelPublish', 'isTerminalUpdateInfo', 'isAddDevice', 'isSynToRedis', 'isImpower', 'isImpowerScenery', 'isRoleImpower', 'isFunctionImpower', 'isReloadImpower', 'isResetPassword', 'isAllotDevice','isAddGuide', 'isImportRfid', 'isImportDevice', 'isExportDevice', 'isImportParam'],
     methods: {
 
       //A2片区管理--点击片区管理按钮触发事件，获取对应片区的信息
       areaInfoSearch() {
         this.$emit('getDefaultInfo4')
       },
+
       //A2添加景区到对应片区里面
       addSceneryToArea() {
         this.$emit('addSceneryIntoArea', this.allParams.canChooseScenery)
@@ -1484,6 +1486,9 @@
         this.$emit('returnFacilityFn')
       },
 
+      addGuide(){
+         this.$emit('addGuide')
+      },
 
       //打开新增/编辑模态框
       openAddEditorDialog(n) {

@@ -429,11 +429,11 @@
     },
     created(){
       var kkkk = this.$store.state.menuVarArr
-      console.log('kkkkkkkkkk:',kkkk)
+      // console.log('kkkkkkkkkk:',kkkk)
 
       var sureType = typeof kkkk
 
-      console.log('sureType:',sureType,sureType==='string',)
+      // console.log('sureType:',sureType,sureType==='string',)
 
      if(sureType === 'string'){
        this.menuVar = Object.assign({},this.menuVar,JSON.parse(kkkk))

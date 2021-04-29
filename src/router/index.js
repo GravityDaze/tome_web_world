@@ -62,7 +62,7 @@ const router = new Router({
         {
           path: '/scenerymanage',
           name: 'sceneryManage',
-          component: resolve => require(['@/pages/sceneryManageMenu/sceneryManage'], resolve)
+          component: resolve => require(['@/pages/sceneryManageMenu/sceneryManage2'], resolve)
         },
         {
           path: '/scenerycoveragemanage',
@@ -72,7 +72,7 @@ const router = new Router({
         {
           path: '/sceneryspotmanage',
           name: 'scenerySpotManage',
-          component: resolve => require(['@/pages/sceneryManageMenu/scenerySpotManage'], resolve)
+          component: resolve => require(['@/pages/sceneryManageMenu/scenerySpotManage2'], resolve)
         },
         {
           path: '/servicefacilitymanage',

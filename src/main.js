@@ -31,7 +31,9 @@ Vue.prototype.$axios = Axios;
 Vue.prototype.$echarts = echarts
 Vue.prototype.$qiniu = qiniu
 // Axios.defaults.baseURL = process.env.NODE_ENV === 'development'?'http://tome3pay.zhihuiquanyu.com':'http://47.92.104.251:8080';
-Axios.defaults.baseURL = process.env.NODE_ENV === 'development'?'http://192.168.0.103:8080':'https://tome3pay.zhihuiquanyu.com';
+// Axios.defaults.baseURL = process.env.NODE_ENV === 'development'?'http://192.168.0.103:8080':'https://tome3pay.zhihuiquanyu.com';
+Axios.defaults.baseURL = 'https://tome3pay.zhihuiquanyu.com';
+// Axios.defaults.baseURL = 'http://i42hdi.natappfree.cc';
 // Axios.defaults.baseURL = process.env.NODE_ENV === 'development'?'http://192.168.0.185:8080':'http://tome3pay.zhihuiquanyu.com';
 // Axios.defaults.baseURL = process.env.NODE_ENV === 'development'?'http://192.168.0.181:8080':'http://tome3pay.zhihuiquanyu.com';
 
@@ -57,6 +59,9 @@ import chooseSceneryServiceDialog from './components/chooseSceneryServiceDialog'
 import chooseOrganizationDialog from './components/chooseOrganizationDialog'
 import chooseSceneryDialog from './components/chooseSceneryDialog'
 import chooseTourGroupDialog from './components/chooseTourGroupDialog'
+import Tables from "./components/Tables";
+import Searchs from "./components/Searchs";
+
 //注册组件(全局)
 Vue.component('carousel', carousel)
 Vue.component('carousel2', carousel2)
@@ -75,6 +80,8 @@ Vue.component('chooseSceneryServiceDialog',chooseSceneryServiceDialog)
 Vue.component('chooseOrganizationDialog',chooseOrganizationDialog)
 Vue.component('chooseSceneryDialog',chooseSceneryDialog)
 Vue.component('chooseTourGroupDialog',chooseTourGroupDialog)
+Vue.component('Tables',Tables)
+Vue.component('Searchs',Searchs)
 
 // 添加请求拦截器，在请求头中加token
 Axios.interceptors.request.use(
